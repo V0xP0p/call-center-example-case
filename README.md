@@ -2,6 +2,9 @@
 
 This repository is a canonical source of truth for example builders across a wider SDK. It is intentionally implementation-agnostic and organized around reusable specifications, fixtures, contracts, and acceptance cases rather than a single runnable app.
 
+GitHub repository description:
+`Repo-ready use-case pack for a centralized pharma contact center, with shared fixtures, contracts, RAG pipeline artifacts, guardrails, and eval cases.`
+
 ## What This Repo Contains
 
 - A single end-to-end contact-center scenario spanning patient, doctor, and colleague personas.
@@ -48,3 +51,7 @@ The flagship flow is a doctor-reported possible adverse event that requires:
 - Agent template teams: start with [`briefs/agent-cookie-cutters.md`](briefs/agent-cookie-cutters.md)
 - Scaffold teams: start with [`briefs/project-scaffold.md`](briefs/project-scaffold.md)
 - Evals and guardrails teams: start with [`docs/asset-mapping.md`](docs/asset-mapping.md)
+
+## Initial Release Notes
+
+See [`docs/release-notes-v0.1.0.md`](docs/release-notes-v0.1.0.md) for a GitHub-ready first release summary.
