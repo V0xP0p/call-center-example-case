@@ -17,7 +17,7 @@ This release establishes a shared scenario, reusable local fixtures, neutral con
 
 ## Highlights
 
-- Flagship end-to-end scenario: doctor-reported possible adverse event with verification, safety intake, retrieval, guardrails, and evaluation
+- Flagship end-to-end scenario: doctor sample-order request with verification, sample lookup, retrieval, mock order creation, guardrails, and evaluation
 - Retrieval cases covering doctor, patient, colleague, and out-of-corpus behavior
 - JSON-schema contracts that different stacks can reuse without coupling to one implementation
 

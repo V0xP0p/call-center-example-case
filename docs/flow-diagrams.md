@@ -26,18 +26,19 @@ flowchart TD
     M --> N["Run trace + eval harness"]
 ```
 
-## Flagship Doctor Adverse-Event Flow
+## Flagship Doctor Sample-Order Flow
 
 ```mermaid
 flowchart TD
-    A["Doctor reports possible adverse event"] --> B["Triage marks doctor + mixed intent"]
+    A["Doctor requests available drug samples"] --> B["Triage marks doctor + sample-order intent"]
     B --> C["lookup_contact_profile"]
-    C --> D["Safety intake agent collects required details"]
-    D --> E["file_safety_report"]
-    E --> F["Retrieve reporting SOP + HCP medical info"]
-    F --> G["Guardrails enforce approved language and citations"]
-    G --> H["Respond with next steps and report confirmation"]
-    H --> I["Score route, retrieval, tool use, safety completeness"]
+    C --> D["lookup_doctor_sample_inventory"]
+    D --> E["Retrieve HCP sample-order guidance"]
+    E --> F["Confirm chosen product and quantity"]
+    F --> G["create_sample_order"]
+    G --> H["Guardrails enforce approved language and citations"]
+    H --> I["Respond with availability and order confirmation"]
+    I --> J["Score route, retrieval, tool use, grounding, task success"]
 ```
 
 ## RAG Pipeline Flow

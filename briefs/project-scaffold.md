@@ -22,6 +22,6 @@ Create a starter project generator that uses this use-case pack as its default e
 ## Minimum Done Definition
 
 - generated project can mount the local fixtures
-- generated project exposes a way to run the flagship doctor adverse-event flow
+- generated project exposes a way to run the flagship doctor sample-order flow
 - generated project keeps integrations mocked and local-only
 - generated project clearly points adopters back to this repo for scenario truth

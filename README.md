@@ -28,13 +28,13 @@ GitHub repository description:
 
 An inbound text user contacts a centralized pharma support center. The system identifies the persona (`patient`, `doctor`, or `colleague`), classifies intent, routes to the appropriate agentic flow, retrieves approved knowledge when needed, uses local mock tools for deterministic actions, applies safety and compliance guardrails, and either responds or escalates.
 
-The flagship flow is a doctor-reported possible adverse event that requires:
+The flagship flow is a doctor sample-order request that requires:
 
 1. Persona verification
-2. Safety-sensitive routing
-3. Structured adverse-event intake
-4. Mock safety report filing
-5. Retrieval of approved reporting guidance
+2. Lookup of doctor-specific sample availability
+3. Retrieval of approved sample-order guidance
+4. Sample selection and quantity capture
+5. Mock order-form creation
 6. Guardrailed, grounded response generation
 7. Shared evaluation of the full trace
 
@@ -43,7 +43,13 @@ The flagship flow is a doctor-reported possible adverse event that requires:
 - Treat `fixtures/` and `contracts/` as the shared integration boundary.
 - Use `docs/asset-mapping.md` to identify which subset belongs to your asset.
 - Use `fixtures/transcripts/` and `fixtures/evals/` as the starting point for examples and regression tests.
+- Use the golden response examples in `fixtures/transcripts/*.golden_response.json` when you want concrete assistant wording in addition to trait-based expectations.
 - Use `fixtures/knowledge/` as the first-release RAG corpus and pipeline contract.
+
+## Featured Golden Responses
+
+- Doctor sample-order assistant wording: `fixtures/transcripts/doctor_sample_order_flagship.golden_response.json`
+- Patient implicit adverse-event assistant wording: `fixtures/transcripts/patient_implicit_adverse_event.golden_response.json`
 
 ## Recommended Starting Points
 

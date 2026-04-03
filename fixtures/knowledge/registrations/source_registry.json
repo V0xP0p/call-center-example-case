@@ -68,5 +68,19 @@
     "content_section": "reporting_contact",
     "sensitivity": "public_hcp",
     "citation_label": "Safety Contact Template"
+  },
+  {
+    "doc_id": "doc-sample-ordering-guide",
+    "title": "Cardiolase Sample Ordering Guide",
+    "source_path": "fixtures/knowledge/sources/sample_ordering_guide.md",
+    "source_type": "markdown",
+    "audience": "doctor",
+    "product": "Cardiolase",
+    "region": "global",
+    "approved_status": "approved",
+    "effective_date": "2026-03-10",
+    "content_section": "sample_ordering",
+    "sensitivity": "public_hcp",
+    "citation_label": "Cardiolase Sample Ordering Guide"
   }
 ]

@@ -24,11 +24,11 @@ The scenario is intentionally rich enough to exercise routing, retrieval, determ
 
 ### Patient
 
-A patient contacts the centralized support center to ask about symptoms, support programs, or case status. The system may retrieve public patient-facing material and use support tools, but must not provide diagnosis or expose internal-only content.
+A patient contacts the centralized support center to ask about symptoms, support programs, or case status. The system may retrieve public patient-facing material and use support tools, but must not provide diagnosis or expose internal-only content. If a patient describes a possible adverse event, the system should detect the safety signal even when the patient does not explicitly say they are "reporting an adverse event."
 
 ### Doctor
 
-A healthcare professional requests approved information, may report a possible adverse event, or may ask for product and reporting guidance. The system can verify clinician identity through local mock data and may retrieve HCP-appropriate content.
+A healthcare professional requests approved information or requests drug samples. The system can verify clinician identity through local mock data, check doctor-specific sample availability, retrieve HCP-appropriate content, and create a mock order form once the doctor confirms product and quantity.
 
 ### Colleague
 
@@ -36,20 +36,22 @@ A pharma colleague asks about internal workflow, approval processes, or contact-
 
 ## Canonical Sub-Scenarios
 
-### 1. Doctor medical information request
+### 1. Doctor sample order request
 
 Example prompt:
 
-> I am Dr. Rivera. Can you send me the approved information on side effects for Cardiolase and how to report a serious event?
+> I am Dr. Rivera. What Cardiolase samples do I have available right now, and can I place an order for some?
 
 Expected behaviors:
 
 - identify likely doctor persona
 - verify the contact against local records
-- classify as mixed `medical_information` plus `adverse_event` sensitivity
-- retrieve HCP-safe information
-- cite approved sources
-- avoid diagnosis or treatment recommendations
+- classify as `sample_request`
+- check doctor-specific sample inventory from local mock data
+- retrieve HCP-safe ordering guidance
+- present available products and quantities clearly
+- collect doctor choice and requested quantity
+- trigger a mock tool that creates a sample-order form
 
 ### 2. Patient adverse event intake
 
@@ -60,13 +62,29 @@ Example prompt:
 Expected behaviors:
 
 - identify patient persona
+- infer likely adverse-event reporting intent from symptom language
 - route into safety-sensitive intake
 - ask required follow-up questions
 - file a mock safety report when minimum information is collected
 - use approved, non-diagnostic language
 - encourage appropriate follow-up and escalation
 
-### 3. Patient access/support request
+### 3. Doctor medical information request
+
+Example prompt:
+
+> I am Dr. Rivera. Can you send me the approved information on side effects for Cardiolase and how to report a serious event?
+
+Expected behaviors:
+
+- identify likely doctor persona
+- verify the contact against local records
+- classify as `medical_information`
+- retrieve HCP-safe information
+- cite approved sources
+- avoid diagnosis or treatment recommendations
+
+### 4. Patient access/support request
 
 Example prompt:
 
@@ -79,7 +97,7 @@ Expected behaviors:
 - use mock tool lookup for case status when enough identity is provided
 - keep the answer procedural and policy-based
 
-### 4. Internal colleague process/policy question
+### 5. Internal colleague process/policy question
 
 Example prompt:
 
@@ -93,17 +111,18 @@ Expected behaviors:
 
 ## Flagship End-to-End Flow
 
-The flagship scenario is the doctor adverse-event flow because it crosses every major asset:
+The flagship scenario is the doctor sample-order flow because it crosses every major asset:
 
-1. Inbound doctor message mentions a possible adverse event.
-2. Triage agent detects doctor identity cues and safety sensitivity.
+1. Inbound doctor message requests available product samples.
+2. Triage agent detects doctor identity cues and order intent.
 3. Mock tool verifies the doctor profile.
-4. Safety intake agent collects minimum required details.
-5. Mock tool files a safety report locally.
-6. RAG retrieves approved reporting and medical-information documents.
-7. Guardrails enforce non-diagnostic, citation-backed, escalation-safe language.
-8. System sends the response and logs a run trace.
-9. Eval harness scores route quality, retrieval quality, tool use, safety completeness, and grounding.
+4. Mock tool looks up doctor-specific sample inventory.
+5. RAG retrieves approved sample-ordering guidance.
+6. System confirms selected product and quantity with the doctor.
+7. Mock tool creates a local sample-order form artifact.
+8. Guardrails enforce approved, role-appropriate, citation-backed language.
+9. System sends the response and logs a run trace.
+10. Eval harness scores route quality, retrieval quality, tool use, grounding, and task success.
 
 ## Success Criteria
 
@@ -112,4 +131,4 @@ The use-case pack is successful when:
 - each asset team can identify the exact subset they need to implement
 - teams can reuse the same fixtures and eval cases across different libraries
 - the RAG pipeline can be exercised end to end from raw document sources to retrieval-ready chunks
-- the flagship adverse-event scenario demonstrates the full SDK story without external dependencies
+- the flagship sample-order scenario demonstrates the full SDK story without external dependencies

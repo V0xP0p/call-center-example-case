@@ -23,6 +23,7 @@ This repo is a shared use-case pack for multiple asset teams. The goal is to kee
 - `fixtures/knowledge/chunks/`: golden chunking outputs.
 - `fixtures/knowledge/retrieval_cases/`: retrieval prompts, constraints, and expected outputs.
 - `fixtures/transcripts/`: scenario-aligned conversation seeds.
+- `fixtures/transcripts/*.golden_response.json`: example assistant wording aligned to the transcript scenarios.
 - `fixtures/evals/`: reusable eval datasets and acceptance cases.
 
 ## When Adding A New Fixture
@@ -32,6 +33,7 @@ This repo is a shared use-case pack for multiple asset teams. The goal is to kee
 3. Update the relevant docs if the fixture introduces a new behavior or scenario branch.
 4. If the fixture is meant for evaluation, add or update an eval row under `fixtures/evals/`.
 5. If the fixture depends on a shared shape, validate it against the corresponding schema in `contracts/`.
+6. If the fixture introduces an important conversation path, consider adding a matching `*.golden_response.json` example under `fixtures/transcripts/`.
 
 ## When Changing Contracts
 
@@ -71,6 +73,7 @@ Before submitting changes, confirm:
 - no internal-only documents are accidentally expected in patient-facing cases
 - no examples require external services
 - new scenarios have at least one transcript or eval row
+- golden response fixtures still match the intended transcript behavior when present
 
 ## Recommended Workflow
 

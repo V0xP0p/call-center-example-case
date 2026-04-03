@@ -1,0 +1,36 @@
+{
+  "scenario_id": "patient-implicit-adverse-event",
+  "description": "Patient describes symptoms that should trigger adverse-event intake without explicitly saying they want to file a report.",
+  "turns": [
+    {
+      "speaker": "user",
+      "message": "Hi, I started taking Cardiolase two days ago and since then I have been really dizzy and throwing up. I was calling to ask if that can happen."
+    },
+    {
+      "speaker": "expected_system",
+      "message_traits": [
+        "identifies patient language",
+        "treats the message as safety-sensitive even without explicit reporting language",
+        "asks for minimum reportable information if not yet complete",
+        "avoids diagnosis or treatment direction",
+        "encourages appropriate follow-up and escalation"
+      ]
+    },
+    {
+      "speaker": "user",
+      "message": "My name is Elena Santos. I am the one taking it, and the dizziness started yesterday evening."
+    },
+    {
+      "speaker": "expected_system",
+      "message_traits": [
+        "uses the follow-up information to continue minimum safety intake",
+        "recognizes the patient as the identifiable patient when enough information is given",
+        "continues using non-diagnostic language",
+        "prepares to create a safety event form when minimum fields are complete"
+      ]
+    }
+  ],
+  "expected_route": "patient_adverse_event",
+  "required_tools": ["file_safety_report"],
+  "required_docs": []
+}

@@ -36,6 +36,19 @@
     "scoring_dimensions": ["retrieval_relevance", "filtering_accuracy", "groundedness"]
   },
   {
+    "scenario_id": "rag-doctor-sample-ordering",
+    "description": "Doctor sample-order retrieval uses approved HCP ordering guidance only.",
+    "input": {
+      "retrieval_case": "fixtures/knowledge/retrieval_cases/doctor_sample_ordering.json"
+    },
+    "expected": {
+      "required_docs": ["doc-sample-ordering-guide"],
+      "forbidden_docs": ["doc-materials-approval-table", "doc-safety-sop-export"],
+      "response_traits": ["cites approved sources", "stays within sample-order guidance"]
+    },
+    "scoring_dimensions": ["retrieval_relevance", "filtering_accuracy", "groundedness"]
+  },
+  {
     "scenario_id": "rag-patient-symptom-support",
     "description": "Patient retrieval stays within patient-safe support guidance.",
     "input": {

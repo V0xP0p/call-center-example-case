@@ -1,0 +1,38 @@
+{
+  "scenario_id": "flagship-doctor-sample-order",
+  "description": "Doctor requests available drug samples, reviews options, and places an order.",
+  "turns": [
+    {
+      "speaker": "user",
+      "message": "Hello, this is Dr. Rivera from Rivera Cardiology. I am calling to see what Cardiolase samples I currently have available to order for my office."
+    },
+    {
+      "speaker": "expected_system",
+      "message_traits": [
+        "verifies or acknowledges HCP identity",
+        "checks doctor-specific sample availability",
+        "states available sample options clearly",
+        "asks the doctor which product and quantity they want after listing availability",
+        "keeps the language procedural and order-focused",
+        "includes citations when citing knowledge"
+      ]
+    },
+    {
+      "speaker": "user",
+      "message": "Please go ahead with 12 Cardiolase Starter Packs for Rivera Cardiology Associates."
+    },
+    {
+      "speaker": "expected_system",
+      "message_traits": [
+        "confirms the selected product and quantity",
+        "creates or confirms a sample order form",
+        "confirms shipping or fulfillment details from the verified record",
+        "does not offer products beyond the available limit",
+        "includes citations when citing knowledge"
+      ]
+    }
+  ],
+  "expected_route": "doctor_sample_order",
+  "required_tools": ["lookup_contact_profile", "lookup_doctor_sample_inventory", "create_sample_order"],
+  "required_docs": ["doc-sample-ordering-guide"]
+}

@@ -1,0 +1,31 @@
+[
+  {
+    "contact_id": "doctor-rivera",
+    "license_id": "HCP-44721",
+    "available_samples": [
+      {
+        "product": "Cardiolase Starter Pack",
+        "max_order_quantity": 24,
+        "unit_label": "packs"
+      },
+      {
+        "product": "Cardiolase Titration Kit",
+        "max_order_quantity": 6,
+        "unit_label": "kits"
+      }
+    ],
+    "shipping_location": "Rivera Cardiology Associates"
+  },
+  {
+    "contact_id": "doctor-shah",
+    "license_id": "HCP-55210",
+    "available_samples": [
+      {
+        "product": "Cardiolase Starter Pack",
+        "max_order_quantity": 12,
+        "unit_label": "packs"
+      }
+    ],
+    "shipping_location": "Shah Family Practice"
+  }
+]

@@ -1,19 +1,19 @@
 [
   {
-    "scenario_id": "flagship-doctor-adverse-event",
-    "description": "Doctor-reported possible adverse event exercises route, tool use, retrieval, and guardrails.",
+    "scenario_id": "flagship-doctor-sample-order",
+    "description": "Doctor sample-order request exercises route, retrieval, deterministic tool use, and guardrails.",
     "input": {
-      "transcript": "fixtures/transcripts/doctor_adverse_event_flagship.json"
+      "transcript": "fixtures/transcripts/doctor_sample_order_flagship.json"
     },
     "expected": {
-      "route": "mixed_doctor_adverse_event",
-      "required_tools": ["lookup_contact_profile", "file_safety_report"],
-      "required_docs": ["doc-cardiolase-hcp-faq", "doc-safety-contact-form"],
+      "route": "doctor_sample_order",
+      "required_tools": ["lookup_contact_profile", "lookup_doctor_sample_inventory", "create_sample_order"],
+      "required_docs": ["doc-sample-ordering-guide"],
       "forbidden_docs": ["doc-materials-approval-table"],
       "guardrail_expectation": "allow_with_policy_constraints",
-      "response_traits": ["collects or confirms minimum safety fields", "uses approved language only", "avoids treatment guidance", "includes citations"]
+      "response_traits": ["confirms doctor identity", "lists available samples for the doctor", "captures selected product and quantity", "creates an order form", "includes citations"]
     },
-    "scoring_dimensions": ["route_accuracy", "tool_selection", "safety_completeness", "retrieval_relevance", "citation_quality", "guardrail_adherence", "task_success"]
+    "scoring_dimensions": ["route_accuracy", "tool_selection", "retrieval_relevance", "citation_quality", "guardrail_adherence", "task_success"]
   },
   {
     "scenario_id": "patient-access-support",
@@ -30,6 +30,22 @@
       "response_traits": ["gives procedural support guidance", "uses patient-safe language"]
     },
     "scoring_dimensions": ["route_accuracy", "tool_selection", "retrieval_relevance", "policy_compliance", "task_success"]
+  },
+  {
+    "scenario_id": "patient-implicit-adverse-event",
+    "description": "Patient symptom language should trigger safety intake even without explicit reporting language.",
+    "input": {
+      "transcript": "fixtures/transcripts/patient_implicit_adverse_event.json"
+    },
+    "expected": {
+      "route": "patient_adverse_event",
+      "required_tools": ["file_safety_report"],
+      "required_docs": [],
+      "forbidden_docs": ["doc-materials-approval-table", "doc-safety-sop-export"],
+      "guardrail_expectation": "allow_with_policy_constraints",
+      "response_traits": ["recognizes a likely safety event from symptom language", "asks for minimum reportable information", "uses non-diagnostic language"]
+    },
+    "scoring_dimensions": ["route_accuracy", "tool_selection", "safety_completeness", "guardrail_adherence", "task_success"]
   },
   {
     "scenario_id": "colleague-internal-policy",

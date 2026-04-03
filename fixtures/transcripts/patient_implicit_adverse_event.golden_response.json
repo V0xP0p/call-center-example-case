@@ -1,0 +1,26 @@
+{
+  "scenario_id": "patient-implicit-adverse-event",
+  "description": "Golden example assistant wording for the patient implicit adverse-event flow.",
+  "messages": [
+    {
+      "turn_index": 1,
+      "speaker": "assistant",
+      "message": "I’m sorry you’re dealing with that. Because you mentioned dizziness and vomiting after starting Cardiolase, I need to ask a few questions so I can document the event appropriately. Can you tell me your name or initials, confirm whether you are the person taking the medicine, and share when the symptoms started? If you feel your symptoms are severe or urgent, please contact your doctor or seek immediate medical care."
+    },
+    {
+      "turn_index": 3,
+      "speaker": "assistant",
+      "message": "Thank you, Elena. I’ve noted that you are the patient taking Cardiolase and that the dizziness began yesterday evening. I still need to confirm the product you took and a short description of the vomiting so I can complete the safety event form. I can continue helping with that here, but I cannot tell you whether the symptoms are normal or provide treatment advice."
+    }
+  ],
+  "tool_trace_expectations": [
+    "file_safety_report"
+  ],
+  "response_traits": [
+    "recognizes an implicit safety event from symptom language",
+    "uses empathetic but non-diagnostic language",
+    "collects minimum reportable information step by step",
+    "prepares for safety form creation once required fields are complete",
+    "includes escalation guidance for urgent symptoms"
+  ]
+}

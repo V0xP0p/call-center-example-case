@@ -1,0 +1,14 @@
+{
+  "scenario_id": "rag-doctor-sample-ordering",
+  "query": "I am Dr. Rivera. What samples can I order for Cardiolase and what is the approved process to submit the order?",
+  "persona": "doctor",
+  "allowed_retrieval_scope": {
+    "audiences": ["doctor", "public"],
+    "sensitivity": ["public_hcp", "public_patient"],
+    "products": ["Cardiolase"]
+  },
+  "expected_relevant_docs": ["doc-sample-ordering-guide"],
+  "expected_excluded_docs": ["doc-materials-approval-table", "doc-safety-sop-export"],
+  "expected_response_traits": ["describes approved sample-order steps", "keeps guidance procedural", "includes citations"],
+  "expected_citation_behavior": "Must cite only approved HCP sample-ordering materials."
+}

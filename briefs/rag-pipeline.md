@@ -31,4 +31,4 @@ Implement the first-release RAG example using the complete local corpus and stag
 - retrieval cases return the expected document families
 - internal-only content is excluded for non-colleague personas
 - outputs conform to the shared retrieval contract
-- the flagship doctor adverse-event flow can consume the produced evidence package
+- the flagship doctor sample-order flow can consume the produced evidence package

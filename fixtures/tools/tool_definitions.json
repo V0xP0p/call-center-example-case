@@ -22,5 +22,17 @@
     "description": "Writes a local structured adverse-event record for demo purposes.",
     "backing_store": "fixtures/tools/safety_report_template.json",
     "example_keys": ["reporter", "patient", "product", "event_summary"]
+  },
+  {
+    "tool_name": "lookup_doctor_sample_inventory",
+    "description": "Fetches the currently available product samples for a verified doctor.",
+    "backing_store": "fixtures/tools/doctor_sample_inventory.json",
+    "example_keys": ["contact_id", "license_id", "product"]
+  },
+  {
+    "tool_name": "create_sample_order",
+    "description": "Creates a local structured sample-order form for demo purposes.",
+    "backing_store": "fixtures/tools/sample_order_template.json",
+    "example_keys": ["contact_id", "product", "quantity", "shipping_location"]
   }
 ]

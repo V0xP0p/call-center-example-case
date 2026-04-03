@@ -18,14 +18,14 @@ Provide reusable templates for agents that appear in the centralized contact-cen
 - input: route decision, retrieval package, optional tool results
 - output: response draft plus trace steps
 - tools: lookup tools only when route allows
-- responsibilities: answer support or information requests using approved content
+- responsibilities: answer support, information, or sample-order requests using approved content and allowed tool results
 
 ### Safety Intake Agent
 
 - input: safety-sensitive route and current conversation state
 - output: required follow-up questions or structured adverse-event record
 - tools: `file_safety_report`
-- responsibilities: collect minimum reportable information and trigger escalation-safe response behavior
+- responsibilities: collect minimum reportable information and trigger escalation-safe response behavior, including when a patient implies a possible adverse event without naming it explicitly
 
 ### Escalation Agent
 

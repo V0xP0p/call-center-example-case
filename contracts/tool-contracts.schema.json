@@ -10,7 +10,7 @@
       "required": ["tool_name", "arguments", "request_id"],
       "properties": {
         "request_id": { "type": "string" },
-        "tool_name": { "type": "string", "enum": ["lookup_contact_profile", "lookup_case_history", "create_support_case", "file_safety_report"] },
+        "tool_name": { "type": "string", "enum": ["lookup_contact_profile", "lookup_case_history", "create_support_case", "file_safety_report", "lookup_doctor_sample_inventory", "create_sample_order"] },
         "arguments": { "type": "object" },
         "requested_by": { "type": "string" },
         "audit_reason": { "type": "string" }
