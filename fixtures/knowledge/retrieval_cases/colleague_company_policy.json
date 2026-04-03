@@ -1,0 +1,14 @@
+{
+  "scenario_id": "rag-colleague-company-policy",
+  "query": "I am planning a team trip next month. What do company policies say about hybrid attendance, reimbursable travel costs, and handling confidential files while traveling?",
+  "persona": "colleague",
+  "allowed_retrieval_scope": {
+    "audiences": ["internal", "colleague", "public"],
+    "sensitivity": ["internal", "public_hcp", "public_patient"],
+    "products": ["multi"]
+  },
+  "expected_relevant_docs": ["doc-hybrid-travel-expense-policy-pdf", "doc-information-security-policy-pdf"],
+  "expected_excluded_docs": [],
+  "expected_response_traits": ["describes internal company policy requirements", "uses internal-only content appropriately", "includes citations"],
+  "expected_citation_behavior": "May cite internal materials because the persona is colleague."
+}

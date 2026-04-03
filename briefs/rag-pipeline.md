@@ -31,4 +31,4 @@ Implement the first-release RAG example using the complete local corpus and stag
 - retrieval cases return the expected document families
 - internal-only content is excluded for non-colleague personas
 - outputs conform to the shared retrieval contract
-- the main colleague RAG-policy flow can consume the produced evidence package
+- the main colleague company-policy flow can consume the produced evidence package

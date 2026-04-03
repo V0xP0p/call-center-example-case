@@ -18,7 +18,7 @@ This release establishes a shared scenario, reusable local fixtures, neutral con
 ## Highlights
 
 - Flagship end-to-end scenario: doctor sample-order request with verification, sample lookup, retrieval, mock order creation, guardrails, and evaluation
-- Main RAG scenario: colleague question about internal RAG policy using internal PDF policy documents
+- Main RAG scenario: colleague question about internal company policy using internal PDF policy documents
 - Retrieval cases covering doctor, patient, colleague, and out-of-corpus behavior
 - JSON-schema contracts that different stacks can reuse without coupling to one implementation
 

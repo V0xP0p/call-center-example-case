@@ -1,0 +1,25 @@
+{
+  "doc_id": "doc-information-security-policy-pdf",
+  "normalized_text": "Information Security and Acceptable Use Policy\nHandling Confidential Information\n- Confidential company files should be stored only in approved repositories and collaboration systems.\n- Employees should avoid sending confidential files through personal email or unapproved messaging tools.\n- Sensitive files accessed while traveling should be viewed only on managed devices with screen lock enabled.\n\nAuthentication and Devices\n- Multi-factor authentication is required for company systems that store confidential or regulated data.\n- Company-managed laptops should use disk encryption and automatic screen locking.\n- Shared credentials are prohibited.\n\nAcceptable Use\n- Employees should use approved software and report suspected phishing or device loss immediately.\n- Downloading confidential documents to unmanaged personal devices is prohibited.\n- Questions involving potential security incidents should be escalated to the security team rather than answered speculatively.",
+  "content_blocks": [
+    {
+      "block_type": "section",
+      "section_path": ["Handling Confidential Information"],
+      "text": "- Confidential company files should be stored only in approved repositories and collaboration systems.\n- Employees should avoid sending confidential files through personal email or unapproved messaging tools.\n- Sensitive files accessed while traveling should be viewed only on managed devices with screen lock enabled."
+    },
+    {
+      "block_type": "section",
+      "section_path": ["Authentication and Devices"],
+      "text": "- Multi-factor authentication is required for company systems that store confidential or regulated data.\n- Company-managed laptops should use disk encryption and automatic screen locking.\n- Shared credentials are prohibited."
+    },
+    {
+      "block_type": "section",
+      "section_path": ["Acceptable Use"],
+      "text": "- Employees should use approved software and report suspected phishing or device loss immediately.\n- Downloading confidential documents to unmanaged personal devices is prohibited.\n- Questions involving potential security incidents should be escalated to the security team rather than answered speculatively."
+    }
+  ],
+  "normalization_notes": [
+    "Flattened PDF text into section-oriented retrieval blocks.",
+    "Preserved security controls and escalation instructions."
+  ]
+}

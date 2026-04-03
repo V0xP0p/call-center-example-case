@@ -70,45 +70,45 @@
     "citation_label": "Cardiolase Sample Ordering Guide"
   },
   {
-    "doc_id": "doc-rag-data-access-policy-pdf",
-    "title": "Internal RAG Data Access Policy",
-    "source_path": "fixtures/knowledge/sources/internal_rag_data_access_policy.pdf",
+    "doc_id": "doc-leave-time-off-policy-pdf",
+    "title": "Employee Leave and Time Off Policy",
+    "source_path": "fixtures/knowledge/sources/employee_leave_and_time_off_policy.pdf",
     "source_type": "pdf",
     "audience": "internal",
     "product": "multi",
     "region": "global",
     "approved_status": "approved_internal",
     "effective_date": "2026-04-03",
-    "content_section": "internal_rag_policy",
+    "content_section": "internal_company_policy",
     "sensitivity": "internal",
-    "citation_label": "Internal RAG Data Access Policy"
+    "citation_label": "Employee Leave and Time Off Policy"
   },
   {
-    "doc_id": "doc-rag-grounding-policy-pdf",
-    "title": "Internal RAG Grounding and Citation Policy",
-    "source_path": "fixtures/knowledge/sources/internal_rag_grounding_policy.pdf",
+    "doc_id": "doc-hybrid-travel-expense-policy-pdf",
+    "title": "Hybrid Work and Travel Expense Policy",
+    "source_path": "fixtures/knowledge/sources/hybrid_work_and_travel_expense_policy.pdf",
     "source_type": "pdf",
     "audience": "internal",
     "product": "multi",
     "region": "global",
     "approved_status": "approved_internal",
     "effective_date": "2026-04-03",
-    "content_section": "internal_rag_policy",
+    "content_section": "internal_company_policy",
     "sensitivity": "internal",
-    "citation_label": "Internal RAG Grounding and Citation Policy"
+    "citation_label": "Hybrid Work and Travel Expense Policy"
   },
   {
-    "doc_id": "doc-rag-logging-review-policy-pdf",
-    "title": "Internal RAG Logging and Human Review Policy",
-    "source_path": "fixtures/knowledge/sources/internal_rag_logging_review_policy.pdf",
+    "doc_id": "doc-information-security-policy-pdf",
+    "title": "Information Security and Acceptable Use Policy",
+    "source_path": "fixtures/knowledge/sources/information_security_and_acceptable_use_policy.pdf",
     "source_type": "pdf",
     "audience": "internal",
     "product": "multi",
     "region": "global",
     "approved_status": "approved_internal",
     "effective_date": "2026-04-03",
-    "content_section": "internal_rag_policy",
+    "content_section": "internal_company_policy",
     "sensitivity": "internal",
-    "citation_label": "Internal RAG Logging and Human Review Policy"
+    "citation_label": "Information Security and Acceptable Use Policy"
   }
 ]

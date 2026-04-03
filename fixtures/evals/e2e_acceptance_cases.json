@@ -9,7 +9,7 @@
       "route": "doctor_sample_order",
       "required_tools": ["lookup_contact_profile", "lookup_doctor_sample_inventory", "create_sample_order"],
       "required_docs": ["doc-sample-ordering-guide"],
-      "forbidden_docs": ["doc-rag-data-access-policy-pdf", "doc-rag-grounding-policy-pdf", "doc-rag-logging-review-policy-pdf"],
+      "forbidden_docs": ["doc-leave-time-off-policy-pdf", "doc-hybrid-travel-expense-policy-pdf", "doc-information-security-policy-pdf"],
       "guardrail_expectation": "allow_with_policy_constraints",
       "response_traits": ["confirms doctor identity", "lists available samples for the doctor", "captures selected product and quantity", "creates an order form", "includes citations"]
     },
@@ -25,7 +25,7 @@
       "route": "patient_clinical_trial_eligibility",
       "required_tools": ["check_clinical_trial_eligibility"],
       "required_docs": ["doc-public-oncology-trial-eligibility-json"],
-      "forbidden_docs": ["doc-rag-data-access-policy-pdf", "doc-rag-grounding-policy-pdf", "doc-rag-logging-review-policy-pdf", "doc-safety-sop-export"],
+      "forbidden_docs": ["doc-leave-time-off-policy-pdf", "doc-hybrid-travel-expense-policy-pdf", "doc-information-security-policy-pdf", "doc-safety-sop-export"],
       "guardrail_expectation": "allow",
       "response_traits": ["asks or confirms cancer type stage genetic profile and prior treatment response", "gives preliminary screening guidance only", "uses patient-safe language", "does not guarantee enrollment"]
     },
@@ -41,7 +41,7 @@
       "route": "patient_adverse_event",
       "required_tools": ["file_safety_report"],
       "required_docs": [],
-      "forbidden_docs": ["doc-rag-data-access-policy-pdf", "doc-rag-grounding-policy-pdf", "doc-rag-logging-review-policy-pdf", "doc-safety-sop-export"],
+      "forbidden_docs": ["doc-leave-time-off-policy-pdf", "doc-hybrid-travel-expense-policy-pdf", "doc-information-security-policy-pdf", "doc-safety-sop-export"],
       "guardrail_expectation": "allow_with_policy_constraints",
       "response_traits": ["recognizes a likely safety event from symptom language", "asks for minimum reportable information", "uses non-diagnostic language"]
     },
@@ -64,18 +64,18 @@
     "scoring_dimensions": ["route_accuracy", "tool_selection", "persona_handling", "guardrail_adherence", "task_success"]
   },
   {
-    "scenario_id": "colleague-rag-policy",
-    "description": "Colleague internal RAG-policy flow exercises the main internal PDF retrieval path.",
+    "scenario_id": "colleague-company-policy",
+    "description": "Colleague internal company-policy flow exercises the main internal PDF retrieval path.",
     "input": {
-      "transcript": "fixtures/transcripts/colleague_rag_policy.json"
+      "transcript": "fixtures/transcripts/colleague_company_policy.json"
     },
     "expected": {
-      "route": "colleague_rag_policy",
+      "route": "colleague_company_policy",
       "required_tools": ["lookup_contact_profile"],
-      "required_docs": ["doc-rag-data-access-policy-pdf", "doc-rag-grounding-policy-pdf", "doc-rag-logging-review-policy-pdf"],
+      "required_docs": ["doc-leave-time-off-policy-pdf", "doc-hybrid-travel-expense-policy-pdf", "doc-information-security-policy-pdf"],
       "forbidden_docs": [],
       "guardrail_expectation": "allow_internal",
-      "response_traits": ["uses internal PDF policy content only for colleague persona", "summarizes access citation and review requirements accurately"]
+      "response_traits": ["uses internal PDF policy content only for colleague persona", "summarizes leave travel expense and security requirements accurately"]
     },
     "scoring_dimensions": ["route_accuracy", "retrieval_scope_control", "retrieval_relevance", "citation_quality", "task_success"]
   }

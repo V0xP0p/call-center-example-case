@@ -58,7 +58,7 @@ The flagship flow is a doctor sample-order request that requires:
 
 - Doctor sample-order assistant wording: `fixtures/transcripts/doctor_sample_order_flagship.golden_response.json`
 - Patient implicit adverse-event assistant wording: `fixtures/transcripts/patient_implicit_adverse_event.golden_response.json`
-- Colleague internal RAG-policy assistant wording: `fixtures/transcripts/colleague_rag_policy.golden_response.json`
+- Colleague company-policy assistant wording: `fixtures/transcripts/colleague_company_policy.golden_response.json`
 
 ## Recommended Starting Points
 

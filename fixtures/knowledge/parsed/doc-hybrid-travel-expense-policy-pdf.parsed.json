@@ -1,0 +1,48 @@
+{
+  "doc_id": "doc-hybrid-travel-expense-policy-pdf",
+  "source_metadata": {
+    "title": "Hybrid Work and Travel Expense Policy",
+    "source_type": "pdf",
+    "audience": "internal",
+    "product": "multi",
+    "approved_status": "approved_internal",
+    "citation_label": "Hybrid Work and Travel Expense Policy"
+  },
+  "content_blocks": [
+    {
+      "block_type": "heading",
+      "section_path": ["Hybrid Work and Travel Expense Policy"],
+      "text": "Hybrid Work and Travel Expense Policy"
+    },
+    {
+      "block_type": "list",
+      "section_path": ["Hybrid Attendance"],
+      "items": [
+        "Employees assigned to hybrid roles are expected to work from the office at least 3 business days each week unless an approved exception is on file.",
+        "Team leads may set anchor days for in-office collaboration.",
+        "Exceptions for medical, caregiving, or temporary business reasons require manager approval and, when applicable, HR documentation."
+      ]
+    },
+    {
+      "block_type": "list",
+      "section_path": ["Travel Approval"],
+      "items": [
+        "Domestic business travel requires manager approval before booking.",
+        "International travel requires manager approval and budget confirmation from the cost-center owner.",
+        "Travel should use approved booking channels whenever available."
+      ]
+    },
+    {
+      "block_type": "list",
+      "section_path": ["Expense Reimbursement Limits"],
+      "items": [
+        "Airfare should be economy class unless an approved exception applies.",
+        "Hotel reimbursement should stay within the corporate travel rate for the destination.",
+        "Meal reimbursement is limited to 85 USD per travel day unless local policy states a lower cap.",
+        "Expense reports should be submitted within 30 days of travel completion."
+      ]
+    }
+  ],
+  "tables": [],
+  "warnings": []
+}

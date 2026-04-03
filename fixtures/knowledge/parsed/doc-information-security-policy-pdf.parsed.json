@@ -1,0 +1,47 @@
+{
+  "doc_id": "doc-information-security-policy-pdf",
+  "source_metadata": {
+    "title": "Information Security and Acceptable Use Policy",
+    "source_type": "pdf",
+    "audience": "internal",
+    "product": "multi",
+    "approved_status": "approved_internal",
+    "citation_label": "Information Security and Acceptable Use Policy"
+  },
+  "content_blocks": [
+    {
+      "block_type": "heading",
+      "section_path": ["Information Security and Acceptable Use Policy"],
+      "text": "Information Security and Acceptable Use Policy"
+    },
+    {
+      "block_type": "list",
+      "section_path": ["Handling Confidential Information"],
+      "items": [
+        "Confidential company files should be stored only in approved repositories and collaboration systems.",
+        "Employees should avoid sending confidential files through personal email or unapproved messaging tools.",
+        "Sensitive files accessed while traveling should be viewed only on managed devices with screen lock enabled."
+      ]
+    },
+    {
+      "block_type": "list",
+      "section_path": ["Authentication and Devices"],
+      "items": [
+        "Multi-factor authentication is required for company systems that store confidential or regulated data.",
+        "Company-managed laptops should use disk encryption and automatic screen locking.",
+        "Shared credentials are prohibited."
+      ]
+    },
+    {
+      "block_type": "list",
+      "section_path": ["Acceptable Use"],
+      "items": [
+        "Employees should use approved software and report suspected phishing or device loss immediately.",
+        "Downloading confidential documents to unmanaged personal devices is prohibited.",
+        "Questions involving potential security incidents should be escalated to the security team rather than answered speculatively."
+      ]
+    }
+  ],
+  "tables": [],
+  "warnings": []
+}

@@ -1,0 +1,20 @@
+{
+  "scenario_id": "colleague-company-policy",
+  "description": "Golden example assistant wording for the colleague company-policy flow.",
+  "messages": [
+    {
+      "turn_index": 1,
+      "speaker": "assistant",
+      "message": "Company policy says hybrid employees are generally expected to work from the office at least 3 business days each week unless an approved exception is on file. For travel, domestic trips require manager approval before booking, international trips also need budget confirmation, airfare should normally be economy, meal reimbursement is capped at 85 USD per travel day unless a lower local cap applies, and expense reports should be submitted within 30 days of travel completion. While traveling, confidential files should stay in approved systems and should be accessed only on managed devices with screen lock enabled. [Hybrid Work and Travel Expense Policy] [Information Security and Acceptable Use Policy]"
+    }
+  ],
+  "tool_trace_expectations": [
+    "lookup_contact_profile"
+  ],
+  "response_traits": [
+    "internal-only policy tone",
+    "summarizes hybrid attendance travel reimbursement and security requirements",
+    "uses internal citations",
+    "does not overstate what the policy allows"
+  ]
+}

@@ -30,7 +30,7 @@
     },
     "expected": {
       "required_docs": ["doc-cardiolase-hcp-faq", "doc-safety-contact-form"],
-      "forbidden_docs": ["doc-rag-data-access-policy-pdf", "doc-rag-grounding-policy-pdf", "doc-rag-logging-review-policy-pdf", "doc-safety-sop-export"],
+      "forbidden_docs": ["doc-leave-time-off-policy-pdf", "doc-hybrid-travel-expense-policy-pdf", "doc-information-security-policy-pdf", "doc-safety-sop-export"],
       "response_traits": ["cites approved sources", "avoids internal-only material"]
     },
     "scoring_dimensions": ["retrieval_relevance", "filtering_accuracy", "groundedness"]
@@ -43,7 +43,7 @@
     },
     "expected": {
       "required_docs": ["doc-sample-ordering-guide"],
-      "forbidden_docs": ["doc-rag-data-access-policy-pdf", "doc-rag-grounding-policy-pdf", "doc-rag-logging-review-policy-pdf", "doc-safety-sop-export"],
+      "forbidden_docs": ["doc-leave-time-off-policy-pdf", "doc-hybrid-travel-expense-policy-pdf", "doc-information-security-policy-pdf", "doc-safety-sop-export"],
       "response_traits": ["cites approved sources", "stays within sample-order guidance"]
     },
     "scoring_dimensions": ["retrieval_relevance", "filtering_accuracy", "groundedness"]
@@ -56,21 +56,21 @@
     },
     "expected": {
       "required_docs": ["doc-public-oncology-trial-eligibility-json"],
-      "forbidden_docs": ["doc-cardiolase-hcp-faq", "doc-rag-data-access-policy-pdf", "doc-rag-grounding-policy-pdf", "doc-rag-logging-review-policy-pdf", "doc-safety-sop-export"],
+      "forbidden_docs": ["doc-cardiolase-hcp-faq", "doc-leave-time-off-policy-pdf", "doc-hybrid-travel-expense-policy-pdf", "doc-information-security-policy-pdf", "doc-safety-sop-export"],
       "response_traits": ["patient_safe_only"]
     },
     "scoring_dimensions": ["retrieval_relevance", "scope_control", "groundedness"]
   },
   {
-    "scenario_id": "rag-colleague-rag-policy",
-    "description": "Colleague retrieval uses the internal PDF policy corpus as the main RAG example.",
+    "scenario_id": "rag-colleague-company-policy",
+    "description": "Colleague retrieval uses the internal company-policy PDF corpus as the main RAG example.",
     "input": {
-      "retrieval_case": "fixtures/knowledge/retrieval_cases/colleague_rag_policy.json"
+      "retrieval_case": "fixtures/knowledge/retrieval_cases/colleague_company_policy.json"
     },
     "expected": {
-      "required_docs": ["doc-rag-data-access-policy-pdf", "doc-rag-grounding-policy-pdf", "doc-rag-logging-review-policy-pdf"],
+      "required_docs": ["doc-leave-time-off-policy-pdf", "doc-hybrid-travel-expense-policy-pdf", "doc-information-security-policy-pdf"],
       "forbidden_docs": [],
-      "response_traits": ["uses internal policy evidence appropriately", "summarizes access citation and review rules"]
+      "response_traits": ["uses internal policy evidence appropriately", "summarizes leave travel expense and security rules"]
     },
     "scoring_dimensions": ["retrieval_relevance", "filtering_accuracy", "groundedness", "citation_quality"]
   },
@@ -82,7 +82,7 @@
     },
     "expected": {
       "required_docs": [],
-      "forbidden_docs": ["doc-rag-data-access-policy-pdf", "doc-rag-grounding-policy-pdf", "doc-rag-logging-review-policy-pdf", "doc-safety-sop-export"],
+      "forbidden_docs": ["doc-leave-time-off-policy-pdf", "doc-hybrid-travel-expense-policy-pdf", "doc-information-security-policy-pdf", "doc-safety-sop-export"],
       "response_traits": ["honest_limitations", "no_fake_citations"]
     },
     "scoring_dimensions": ["groundedness", "hallucination_resistance"]

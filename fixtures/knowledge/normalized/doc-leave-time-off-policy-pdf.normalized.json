@@ -1,0 +1,25 @@
+{
+  "doc_id": "doc-leave-time-off-policy-pdf",
+  "normalized_text": "Employee Leave and Time Off Policy\nAnnual Leave Rules\n- Full-time employees receive annual leave based on tenure band and local employment terms.\n- Leave requests should be submitted in advance and approved by the direct manager unless local emergency leave rules apply.\n- Unused leave may carry over only within the limits shown below.\n\nCarryover chart and table\n- 0-2 years: 15 annual leave days, 5 carryover cap\n- 3-5 years: 20 annual leave days, 7 carryover cap\n- 6+ years: 25 annual leave days, 10 carryover cap\n\nManager and Employee Responsibilities\n- Managers should balance team coverage with fair access to approved leave.\n- Employees should review their remaining leave balance before submitting a request.\n- Questions about personal leave balance should be answered only for the authenticated employee.",
+  "content_blocks": [
+    {
+      "block_type": "section",
+      "section_path": ["Annual Leave Rules"],
+      "text": "- Full-time employees receive annual leave based on tenure band and local employment terms.\n- Leave requests should be submitted in advance and approved by the direct manager unless local emergency leave rules apply.\n- Unused leave may carry over only within the limits shown below."
+    },
+    {
+      "block_type": "section",
+      "section_path": ["Carryover chart and table"],
+      "text": "- 0-2 years: 15 annual leave days, 5 carryover cap\n- 3-5 years: 20 annual leave days, 7 carryover cap\n- 6+ years: 25 annual leave days, 10 carryover cap"
+    },
+    {
+      "block_type": "section",
+      "section_path": ["Manager and Employee Responsibilities"],
+      "text": "- Managers should balance team coverage with fair access to approved leave.\n- Employees should review their remaining leave balance before submitting a request.\n- Questions about personal leave balance should be answered only for the authenticated employee."
+    }
+  ],
+  "normalization_notes": [
+    "Flattened PDF text into section-oriented retrieval blocks.",
+    "Preserved chart-derived carryover values as structured normalized text."
+  ]
+}

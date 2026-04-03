@@ -8,7 +8,7 @@ flowchart TD
     B --> C{"Persona + intent"}
     C -->|Doctor| D["Doctor/HCP support flow"]
     C -->|Patient| E["Patient clinical-trial and safety flow"]
-    C -->|Colleague| F["Internal colleague HR and RAG-policy flow"]
+    C -->|Colleague| F["Internal colleague HR and company-policy flow"]
     C -->|Unknown or high-risk| G["Human escalation"]
 
     D --> H{"Need tool or retrieval?"}
@@ -50,19 +50,19 @@ flowchart TD
     C --> D["lookup_colleague_hr_profile"]
     D --> E["Guardrails confirm self-service scope only"]
     E --> F["Respond with colleague-specific HR data"]
-    B -->|RAG policy| G["Retrieve internal RAG policy PDFs"]
-    G --> H["Summarize access, citation, logging, and review requirements"]
+    B -->|Company policy| G["Retrieve internal company policy PDFs"]
+    G --> H["Summarize leave, travel, expense, and security requirements"]
     H --> I["Guardrails enforce internal-only handling"]
     I --> J["Respond with policy-backed internal guidance"]
 ```
 
-## Main Internal RAG Policy Flow
+## Main Internal Company Policy RAG Flow
 
 ```mermaid
 flowchart TD
-    A["Colleague asks about company RAG policy"] --> B["Triage marks colleague + internal policy intent"]
-    B --> C["Retrieve internal RAG policy PDFs"]
-    C --> D["Select policy evidence across access, grounding, and review rules"]
+    A["Colleague asks about company policy"] --> B["Triage marks colleague + internal policy intent"]
+    B --> C["Retrieve internal company policy PDFs"]
+    C --> D["Select policy evidence across leave, travel, and security rules"]
     D --> E["Package grounded internal answer with citations"]
     E --> F["Score retrieval relevance, scope control, citation quality, and task success"]
 ```

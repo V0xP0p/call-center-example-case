@@ -1,0 +1,22 @@
+{
+  "scenario_id": "colleague-company-policy",
+  "description": "Colleague asks about general internal company policy covered by the PDF corpus.",
+  "turns": [
+    {
+      "speaker": "user",
+      "message": "I am Priya from medical information and I am planning a team trip next month. What do company policies say about hybrid attendance, travel reimbursement, and handling confidential files while I am traveling?"
+    },
+    {
+      "speaker": "expected_system",
+      "message_traits": [
+        "recognizes colleague persona",
+        "retrieves internal company policy PDFs",
+        "summarizes hybrid attendance travel reimbursement and security requirements accurately",
+        "does not expose internal materials to non-colleague personas"
+      ]
+    }
+  ],
+  "expected_route": "colleague_company_policy",
+  "required_tools": ["lookup_contact_profile"],
+  "required_docs": ["doc-hybrid-travel-expense-policy-pdf", "doc-information-security-policy-pdf"]
+}

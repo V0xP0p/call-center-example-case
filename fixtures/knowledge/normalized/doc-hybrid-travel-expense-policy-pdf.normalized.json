@@ -1,0 +1,25 @@
+{
+  "doc_id": "doc-hybrid-travel-expense-policy-pdf",
+  "normalized_text": "Hybrid Work and Travel Expense Policy\nHybrid Attendance\n- Employees assigned to hybrid roles are expected to work from the office at least 3 business days each week unless an approved exception is on file.\n- Team leads may set anchor days for in-office collaboration.\n- Exceptions for medical, caregiving, or temporary business reasons require manager approval and, when applicable, HR documentation.\n\nTravel Approval\n- Domestic business travel requires manager approval before booking.\n- International travel requires manager approval and budget confirmation from the cost-center owner.\n- Travel should use approved booking channels whenever available.\n\nExpense Reimbursement Limits\n- Airfare should be economy class unless an approved exception applies.\n- Hotel reimbursement should stay within the corporate travel rate for the destination.\n- Meal reimbursement is limited to 85 USD per travel day unless local policy states a lower cap.\n- Expense reports should be submitted within 30 days of travel completion.",
+  "content_blocks": [
+    {
+      "block_type": "section",
+      "section_path": ["Hybrid Attendance"],
+      "text": "- Employees assigned to hybrid roles are expected to work from the office at least 3 business days each week unless an approved exception is on file.\n- Team leads may set anchor days for in-office collaboration.\n- Exceptions for medical, caregiving, or temporary business reasons require manager approval and, when applicable, HR documentation."
+    },
+    {
+      "block_type": "section",
+      "section_path": ["Travel Approval"],
+      "text": "- Domestic business travel requires manager approval before booking.\n- International travel requires manager approval and budget confirmation from the cost-center owner.\n- Travel should use approved booking channels whenever available."
+    },
+    {
+      "block_type": "section",
+      "section_path": ["Expense Reimbursement Limits"],
+      "text": "- Airfare should be economy class unless an approved exception applies.\n- Hotel reimbursement should stay within the corporate travel rate for the destination.\n- Meal reimbursement is limited to 85 USD per travel day unless local policy states a lower cap.\n- Expense reports should be submitted within 30 days of travel completion."
+    }
+  ],
+  "normalization_notes": [
+    "Flattened PDF text into section-oriented retrieval blocks.",
+    "Preserved numeric expense and attendance thresholds."
+  ]
+}

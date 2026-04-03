@@ -124,7 +124,7 @@ Example chunking targets in this repo:
 - HCP side-effect guidance sections
 - adverse-event minimum information checklist
 - patient clinical-trial eligibility criteria
-- internal RAG data-access, grounding, and review policy sections
+- internal leave, travel, and information-security policy sections, including one PDF with a chart or table
 
 ## Stage 6: Index Preparation
 

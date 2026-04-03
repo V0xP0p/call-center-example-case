@@ -76,60 +76,60 @@
     }
   },
   {
-    "chunk_id": "chunk-rag-access-controls",
-    "doc_id": "doc-rag-data-access-policy-pdf",
-    "section_path": ["Required Controls"],
-    "text": "RAG systems must retrieve only from approved source registries, return internal documents only to verified colleagues with matching audience permission, and limit personal employee records to the authenticated employee requesting their own data.",
+    "chunk_id": "chunk-leave-carryover-chart",
+    "doc_id": "doc-leave-time-off-policy-pdf",
+    "section_path": ["Carryover by Tenure Band"],
+    "text": "Carryover by tenure band is capped at 5 days for 0-2 years, 7 days for 3-5 years, and 10 days for 6+ years.",
     "metadata": {
       "audience": "internal",
       "product": "multi",
       "approved_status": "approved_internal",
       "sensitivity": "internal",
       "source_type": "pdf",
-      "content_section": "internal_rag_policy"
+      "content_section": "internal_company_policy"
     },
-    "citation_label": "Internal RAG Data Access Policy",
+    "citation_label": "Employee Leave and Time Off Policy",
     "source_span": {
-      "start_char": 180,
-      "end_char": 426
+      "start_char": 260,
+      "end_char": 376
     }
   },
   {
-    "chunk_id": "chunk-rag-grounding-rules",
-    "doc_id": "doc-rag-grounding-policy-pdf",
-    "section_path": ["Grounded Answer Rules", "Citation Requirements"],
-    "text": "Internal RAG answers must stay grounded in retrieved policy evidence, use human-readable citations, and escalate instead of improvising when evidence is incomplete or conflicting.",
+    "chunk_id": "chunk-travel-expense-rules",
+    "doc_id": "doc-hybrid-travel-expense-policy-pdf",
+    "section_path": ["Hybrid Attendance", "Expense Reimbursement Limits"],
+    "text": "Hybrid employees are expected to work from the office at least 3 business days each week, and travel expenses should follow economy airfare, hotel rate, meal-cap, and 30-day submission rules.",
     "metadata": {
       "audience": "internal",
       "product": "multi",
       "approved_status": "approved_internal",
       "sensitivity": "internal",
       "source_type": "pdf",
-      "content_section": "internal_rag_policy"
+      "content_section": "internal_company_policy"
     },
-    "citation_label": "Internal RAG Grounding and Citation Policy",
+    "citation_label": "Hybrid Work and Travel Expense Policy",
     "source_span": {
-      "start_char": 118,
-      "end_char": 295
+      "start_char": 92,
+      "end_char": 304
     }
   },
   {
-    "chunk_id": "chunk-rag-review-triggers",
-    "doc_id": "doc-rag-logging-review-policy-pdf",
-    "section_path": ["Logging Minimums", "Human Review Triggers"],
-    "text": "RAG logs should minimize personal data, and answers should be routed for human review when requests involve personnel status, leave disputes, disciplinary matters, legal interpretation, or unresolved policy conflict.",
+    "chunk_id": "chunk-security-acceptable-use",
+    "doc_id": "doc-information-security-policy-pdf",
+    "section_path": ["Handling Confidential Information", "Authentication and Devices"],
+    "text": "Confidential files should stay in approved systems, multi-factor authentication is required for company systems holding sensitive data, and downloading confidential documents to unmanaged personal devices is prohibited.",
     "metadata": {
       "audience": "internal",
       "product": "multi",
       "approved_status": "approved_internal",
       "sensitivity": "internal",
       "source_type": "pdf",
-      "content_section": "internal_rag_policy"
+      "content_section": "internal_company_policy"
     },
-    "citation_label": "Internal RAG Logging and Human Review Policy",
+    "citation_label": "Information Security and Acceptable Use Policy",
     "source_span": {
-      "start_char": 110,
-      "end_char": 332
+      "start_char": 101,
+      "end_char": 323
     }
   }
 ]

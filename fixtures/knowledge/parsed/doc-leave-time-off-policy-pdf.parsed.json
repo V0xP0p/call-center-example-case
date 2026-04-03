@@ -1,0 +1,53 @@
+{
+  "doc_id": "doc-leave-time-off-policy-pdf",
+  "source_metadata": {
+    "title": "Employee Leave and Time Off Policy",
+    "source_type": "pdf",
+    "audience": "internal",
+    "product": "multi",
+    "approved_status": "approved_internal",
+    "citation_label": "Employee Leave and Time Off Policy"
+  },
+  "content_blocks": [
+    {
+      "block_type": "heading",
+      "section_path": ["Employee Leave and Time Off Policy"],
+      "text": "Employee Leave and Time Off Policy"
+    },
+    {
+      "block_type": "list",
+      "section_path": ["Annual Leave Rules"],
+      "items": [
+        "Full-time employees receive annual leave based on tenure band and local employment terms.",
+        "Leave requests should be submitted in advance and approved by the direct manager unless local emergency leave rules apply.",
+        "Unused leave may carry over only within the limits shown below."
+      ]
+    },
+    {
+      "block_type": "chart_summary",
+      "section_path": ["Carryover by Tenure Band"],
+      "text": "Chart shows max carryover days by tenure band: 0-2 years = 5, 3-5 years = 7, 6+ years = 10."
+    },
+    {
+      "block_type": "list",
+      "section_path": ["Manager and Employee Responsibilities"],
+      "items": [
+        "Managers should balance team coverage with fair access to approved leave.",
+        "Employees should review their remaining leave balance before submitting a request.",
+        "Questions about personal leave balance should be answered only for the authenticated employee."
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "leave-carryover-1",
+      "headers": ["tenure_band", "annual_leave_days", "carryover_cap"],
+      "rows": [
+        ["0-2 years", "15", "5"],
+        ["3-5 years", "20", "7"],
+        ["6+ years", "25", "10"]
+      ]
+    }
+  ],
+  "warnings": []
+}

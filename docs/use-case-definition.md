@@ -32,7 +32,7 @@ A healthcare professional requests approved information or requests drug samples
 
 ### Colleague
 
-A pharma colleague asks about personal HR-style data or about internal policy for AI and RAG workflows. The system can verify employee identity, retrieve colleague-only profile data for the authenticated employee, and retrieve internal-only policy content for this persona.
+A pharma colleague asks about personal HR-style data or about general internal company policy. The system can verify employee identity, retrieve colleague-only profile data for the authenticated employee, and retrieve internal-only policy content for this persona.
 
 ## Canonical Sub-Scenarios
 
@@ -99,20 +99,20 @@ Expected behaviors:
 - explain that the result is a preliminary screen rather than an enrollment decision
 - keep the answer procedural and policy-based
 
-### 5. Internal colleague personal-data and RAG-policy requests
+### 5. Internal colleague personal-data and company-policy requests
 
 Example prompts:
 
 > I am Priya from medical information. How many leave days do I have left this year?
 
-> I am on the AI enablement team. What is company policy for a RAG assistant that answers internal questions from policy PDFs?
+> I am planning a team trip next month. What does company policy say about travel reimbursement, hybrid attendance, and handling confidential files while traveling?
 
 Expected behaviors:
 
 - identify colleague persona
 - verify the employee record before disclosing personal data
 - allow personal-data lookup only for the authenticated colleague's own record
-- retrieve internal RAG policy documents for policy questions
+- retrieve internal company policy documents for policy questions
 - summarize internal policy requirements accurately
 - avoid disclosing internal materials to non-colleague personas
 
