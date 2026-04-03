@@ -1,0 +1,22 @@
+{
+  "scenario_id": "patient-clinical-trial-eligibility",
+  "description": "Patient requests a preliminary cancer clinical-trial eligibility screen.",
+  "turns": [
+    {
+      "speaker": "user",
+      "message": "I have stage IV non-small cell lung cancer. My biopsy showed PD-L1 at 20%, EGFR and ALK were negative, and my cancer got worse after platinum chemotherapy and immunotherapy. Could I still be eligible for the trial?"
+    },
+    {
+      "speaker": "expected_system",
+      "message_traits": [
+        "uses patient-safe screening language",
+        "checks the reported cancer type stage biomarker profile and prior treatment response against structured criteria",
+        "explains that the result is preliminary and does not guarantee enrollment",
+        "does not expose internal-only details"
+      ]
+    }
+  ],
+  "expected_route": "patient_clinical_trial_eligibility",
+  "required_tools": ["check_clinical_trial_eligibility"],
+  "required_docs": ["doc-public-oncology-trial-eligibility-json"]
+}

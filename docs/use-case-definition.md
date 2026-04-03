@@ -24,7 +24,7 @@ The scenario is intentionally rich enough to exercise routing, retrieval, determ
 
 ### Patient
 
-A patient contacts the centralized support center to ask about symptoms, support programs, or case status. The system may retrieve public patient-facing material and use support tools, but must not provide diagnosis or expose internal-only content. If a patient describes a possible adverse event, the system should detect the safety signal even when the patient does not explicitly say they are "reporting an adverse event."
+A patient contacts the centralized support center to ask about symptoms or to request a preliminary clinical-trial eligibility screen. The system may retrieve public patient-facing material and use structured eligibility tools, but must not provide diagnosis, guarantee enrollment, or expose internal-only content. If a patient describes a possible adverse event, the system should detect the safety signal even when the patient does not explicitly say they are "reporting an adverse event."
 
 ### Doctor
 
@@ -32,7 +32,7 @@ A healthcare professional requests approved information or requests drug samples
 
 ### Colleague
 
-A pharma colleague asks about internal workflow, approval processes, or contact-center operating procedures. The system can retrieve internal-only policy content for this persona.
+A pharma colleague asks about personal HR-style data or about internal policy for AI and RAG workflows. The system can verify employee identity, retrieve colleague-only profile data for the authenticated employee, and retrieve internal-only policy content for this persona.
 
 ## Canonical Sub-Scenarios
 
@@ -84,29 +84,36 @@ Expected behaviors:
 - cite approved sources
 - avoid diagnosis or treatment recommendations
 
-### 4. Patient access/support request
+### 4. Patient clinical-trial eligibility check
 
 Example prompt:
 
-> My doctor said I might qualify for the support program for Cardiolase. What do I need and can you check my case?
+> I have stage IV non-small cell lung cancer. My PD-L1 was 20%, EGFR and ALK were negative, and my cancer worsened after platinum chemotherapy and immunotherapy. Could I be eligible for the trial you mentioned?
 
 Expected behaviors:
 
-- classify as `access_support`
-- retrieve patient-support policy
-- use mock tool lookup for case status when enough identity is provided
+- classify as `clinical_trial_eligibility`
+- collect or confirm cancer type, stage, biomarker or genetic profile, and response to prior treatment
+- retrieve patient-facing trial criteria
+- use a structured eligibility-check tool against local JSON criteria
+- explain that the result is a preliminary screen rather than an enrollment decision
 - keep the answer procedural and policy-based
 
-### 5. Internal colleague process/policy question
+### 5. Internal colleague personal-data and RAG-policy requests
 
-Example prompt:
+Example prompts:
 
-> I am on the med info team. Which materials need medical-legal-regulatory approval before they can be shared externally?
+> I am Priya from medical information. How many leave days do I have left this year?
+
+> I am on the AI enablement team. What is company policy for a RAG assistant that answers internal questions from policy PDFs?
 
 Expected behaviors:
 
 - identify colleague persona
-- retrieve internal-only documents
+- verify the employee record before disclosing personal data
+- allow personal-data lookup only for the authenticated colleague's own record
+- retrieve internal RAG policy documents for policy questions
+- summarize internal policy requirements accurately
 - avoid disclosing internal materials to non-colleague personas
 
 ## Flagship End-to-End Flow

@@ -30,7 +30,7 @@
     },
     "expected": {
       "required_docs": ["doc-cardiolase-hcp-faq", "doc-safety-contact-form"],
-      "forbidden_docs": ["doc-materials-approval-table", "doc-safety-sop-export"],
+      "forbidden_docs": ["doc-rag-data-access-policy-pdf", "doc-rag-grounding-policy-pdf", "doc-rag-logging-review-policy-pdf", "doc-safety-sop-export"],
       "response_traits": ["cites approved sources", "avoids internal-only material"]
     },
     "scoring_dimensions": ["retrieval_relevance", "filtering_accuracy", "groundedness"]
@@ -43,23 +43,36 @@
     },
     "expected": {
       "required_docs": ["doc-sample-ordering-guide"],
-      "forbidden_docs": ["doc-materials-approval-table", "doc-safety-sop-export"],
+      "forbidden_docs": ["doc-rag-data-access-policy-pdf", "doc-rag-grounding-policy-pdf", "doc-rag-logging-review-policy-pdf", "doc-safety-sop-export"],
       "response_traits": ["cites approved sources", "stays within sample-order guidance"]
     },
     "scoring_dimensions": ["retrieval_relevance", "filtering_accuracy", "groundedness"]
   },
   {
-    "scenario_id": "rag-patient-symptom-support",
-    "description": "Patient retrieval stays within patient-safe support guidance.",
+    "scenario_id": "rag-patient-clinical-trial-eligibility",
+    "description": "Patient retrieval stays within patient-safe clinical-trial screening guidance.",
     "input": {
-      "retrieval_case": "fixtures/knowledge/retrieval_cases/patient_symptom_and_support.json"
+      "retrieval_case": "fixtures/knowledge/retrieval_cases/patient_clinical_trial_eligibility.json"
     },
     "expected": {
-      "required_docs": ["doc-patient-support-html"],
-      "forbidden_docs": ["doc-cardiolase-hcp-faq", "doc-materials-approval-table", "doc-safety-sop-export"],
+      "required_docs": ["doc-public-oncology-trial-eligibility-json"],
+      "forbidden_docs": ["doc-cardiolase-hcp-faq", "doc-rag-data-access-policy-pdf", "doc-rag-grounding-policy-pdf", "doc-rag-logging-review-policy-pdf", "doc-safety-sop-export"],
       "response_traits": ["patient_safe_only"]
     },
     "scoring_dimensions": ["retrieval_relevance", "scope_control", "groundedness"]
+  },
+  {
+    "scenario_id": "rag-colleague-rag-policy",
+    "description": "Colleague retrieval uses the internal PDF policy corpus as the main RAG example.",
+    "input": {
+      "retrieval_case": "fixtures/knowledge/retrieval_cases/colleague_rag_policy.json"
+    },
+    "expected": {
+      "required_docs": ["doc-rag-data-access-policy-pdf", "doc-rag-grounding-policy-pdf", "doc-rag-logging-review-policy-pdf"],
+      "forbidden_docs": [],
+      "response_traits": ["uses internal policy evidence appropriately", "summarizes access citation and review rules"]
+    },
+    "scoring_dimensions": ["retrieval_relevance", "filtering_accuracy", "groundedness", "citation_quality"]
   },
   {
     "scenario_id": "rag-out-of-corpus",
@@ -69,7 +82,7 @@
     },
     "expected": {
       "required_docs": [],
-      "forbidden_docs": ["doc-materials-approval-table", "doc-safety-sop-export"],
+      "forbidden_docs": ["doc-rag-data-access-policy-pdf", "doc-rag-grounding-policy-pdf", "doc-rag-logging-review-policy-pdf", "doc-safety-sop-export"],
       "response_traits": ["honest_limitations", "no_fake_citations"]
     },
     "scoring_dimensions": ["groundedness", "hallucination_resistance"]

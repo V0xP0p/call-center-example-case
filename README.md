@@ -38,6 +38,14 @@ The flagship flow is a doctor sample-order request that requires:
 6. Guardrailed, grounded response generation
 7. Shared evaluation of the full trace
 
+## Five Canonical Flows
+
+- [Doctor sample order request](docs/use-case-definition.md#1-doctor-sample-order-request)
+- [Patient adverse event intake](docs/use-case-definition.md#2-patient-adverse-event-intake)
+- [Doctor medical information request](docs/use-case-definition.md#3-doctor-medical-information-request)
+- [Patient clinical-trial eligibility check](docs/use-case-definition.md#4-patient-clinical-trial-eligibility-check)
+- [Internal colleague personal-data and RAG-policy requests](docs/use-case-definition.md#5-internal-colleague-personal-data-and-rag-policy-requests)
+
 ## How Teams Should Use This Repo
 
 - Treat `fixtures/` and `contracts/` as the shared integration boundary.
@@ -50,6 +58,7 @@ The flagship flow is a doctor sample-order request that requires:
 
 - Doctor sample-order assistant wording: `fixtures/transcripts/doctor_sample_order_flagship.golden_response.json`
 - Patient implicit adverse-event assistant wording: `fixtures/transcripts/patient_implicit_adverse_event.golden_response.json`
+- Colleague internal RAG-policy assistant wording: `fixtures/transcripts/colleague_rag_policy.golden_response.json`
 
 ## Recommended Starting Points
 

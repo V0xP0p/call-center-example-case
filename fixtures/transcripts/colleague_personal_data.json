@@ -1,0 +1,22 @@
+{
+  "scenario_id": "colleague-personal-data",
+  "description": "Colleague asks for their own remaining leave balance.",
+  "turns": [
+    {
+      "speaker": "user",
+      "message": "I am Priya Owens from medical information. Can you check how many leave days I still have left this year?"
+    },
+    {
+      "speaker": "expected_system",
+      "message_traits": [
+        "recognizes colleague persona",
+        "verifies the employee record before disclosing personal data",
+        "returns only the verified colleague's own leave information",
+        "does not expose another employee's data"
+      ]
+    }
+  ],
+  "expected_route": "colleague_personal_data",
+  "required_tools": ["lookup_contact_profile", "lookup_colleague_hr_profile"],
+  "required_docs": []
+}

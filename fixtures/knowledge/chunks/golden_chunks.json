@@ -38,22 +38,22 @@
     }
   },
   {
-    "chunk_id": "chunk-patient-support-documents",
-    "doc_id": "doc-patient-support-html",
-    "section_path": ["Required documents"],
-    "text": "Required documents: Prescriber enrollment form, Signed patient consent, Proof of income when required.",
+    "chunk_id": "chunk-patient-trial-screening-core-criteria",
+    "doc_id": "doc-public-oncology-trial-eligibility-json",
+    "section_path": ["inclusion_criteria", "core_disease_requirements"],
+    "text": "Core trial-screening requirements include non-small cell lung cancer, locally advanced unresectable Stage IIIB or IIIC or metastatic Stage IV disease, and PD-L1 expression on at least 1% of tumor cells.",
     "metadata": {
       "audience": "patient",
-      "product": "Cardiolase",
+      "product": "multi",
       "approved_status": "approved",
       "sensitivity": "public_patient",
-      "source_type": "html",
-      "content_section": "patient_support"
+      "source_type": "json",
+      "content_section": "patient_clinical_trial_eligibility"
     },
-    "citation_label": "Cardiolase Access Path Guide",
+    "citation_label": "Public NSCLC Trial Eligibility Criteria",
     "source_span": {
-      "start_char": 122,
-      "end_char": 228
+      "start_char": 0,
+      "end_char": 199
     }
   },
   {
@@ -73,6 +73,63 @@
     "source_span": {
       "start_char": 318,
       "end_char": 612
+    }
+  },
+  {
+    "chunk_id": "chunk-rag-access-controls",
+    "doc_id": "doc-rag-data-access-policy-pdf",
+    "section_path": ["Required Controls"],
+    "text": "RAG systems must retrieve only from approved source registries, return internal documents only to verified colleagues with matching audience permission, and limit personal employee records to the authenticated employee requesting their own data.",
+    "metadata": {
+      "audience": "internal",
+      "product": "multi",
+      "approved_status": "approved_internal",
+      "sensitivity": "internal",
+      "source_type": "pdf",
+      "content_section": "internal_rag_policy"
+    },
+    "citation_label": "Internal RAG Data Access Policy",
+    "source_span": {
+      "start_char": 180,
+      "end_char": 426
+    }
+  },
+  {
+    "chunk_id": "chunk-rag-grounding-rules",
+    "doc_id": "doc-rag-grounding-policy-pdf",
+    "section_path": ["Grounded Answer Rules", "Citation Requirements"],
+    "text": "Internal RAG answers must stay grounded in retrieved policy evidence, use human-readable citations, and escalate instead of improvising when evidence is incomplete or conflicting.",
+    "metadata": {
+      "audience": "internal",
+      "product": "multi",
+      "approved_status": "approved_internal",
+      "sensitivity": "internal",
+      "source_type": "pdf",
+      "content_section": "internal_rag_policy"
+    },
+    "citation_label": "Internal RAG Grounding and Citation Policy",
+    "source_span": {
+      "start_char": 118,
+      "end_char": 295
+    }
+  },
+  {
+    "chunk_id": "chunk-rag-review-triggers",
+    "doc_id": "doc-rag-logging-review-policy-pdf",
+    "section_path": ["Logging Minimums", "Human Review Triggers"],
+    "text": "RAG logs should minimize personal data, and answers should be routed for human review when requests involve personnel status, leave disputes, disciplinary matters, legal interpretation, or unresolved policy conflict.",
+    "metadata": {
+      "audience": "internal",
+      "product": "multi",
+      "approved_status": "approved_internal",
+      "sensitivity": "internal",
+      "source_type": "pdf",
+      "content_section": "internal_rag_policy"
+    },
+    "citation_label": "Internal RAG Logging and Human Review Policy",
+    "source_span": {
+      "start_char": 110,
+      "end_char": 332
     }
   }
 ]

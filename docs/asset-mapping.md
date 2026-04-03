@@ -69,6 +69,8 @@ Ship the most complete first-release example, covering every stage from source r
 
 A team can implement ingestion, parsing, normalization, chunking, indexing, retrieval, selection, and grounded packaging from the provided corpus and meet the expected retrieval cases.
 
+The main RAG showcase should be the colleague question about internal RAG policy using the internal PDF policy corpus.
+
 ## Guardrails
 
 ### Goal

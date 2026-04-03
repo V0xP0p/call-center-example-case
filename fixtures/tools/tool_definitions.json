@@ -34,5 +34,17 @@
     "description": "Creates a local structured sample-order form for demo purposes.",
     "backing_store": "fixtures/tools/sample_order_template.json",
     "example_keys": ["contact_id", "product", "quantity", "shipping_location"]
+  },
+  {
+    "tool_name": "check_clinical_trial_eligibility",
+    "description": "Evaluates a patient's reported cancer profile against local trial-screening criteria.",
+    "backing_store": "fixtures/knowledge/sources/public_oncology_trial_eligibility.json",
+    "example_keys": ["cancer_type", "stage", "genetic_profile", "prior_treatment_response"]
+  },
+  {
+    "tool_name": "lookup_colleague_hr_profile",
+    "description": "Fetches a verified colleague's own HR-style data for internal self-service requests.",
+    "backing_store": "fixtures/tools/colleague_hr_profiles.json",
+    "example_keys": ["contact_id", "employee_id"]
   }
 ]

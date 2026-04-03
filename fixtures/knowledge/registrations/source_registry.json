@@ -28,32 +28,18 @@
     "citation_label": "AE Intake SOP Rev 4"
   },
   {
-    "doc_id": "doc-patient-support-html",
-    "title": "Cardiolase Support Program Eligibility",
-    "source_path": "fixtures/knowledge/sources/cardiolase_support_program.html",
-    "source_type": "html",
+    "doc_id": "doc-public-oncology-trial-eligibility-json",
+    "title": "Public Advanced NSCLC Trial Eligibility Criteria",
+    "source_path": "fixtures/knowledge/sources/public_oncology_trial_eligibility.json",
+    "source_type": "json",
     "audience": "patient",
-    "product": "Cardiolase",
-    "region": "global",
-    "approved_status": "approved",
-    "effective_date": "2026-01-20",
-    "content_section": "patient_support",
-    "sensitivity": "public_patient",
-    "citation_label": "Cardiolase Access Path Guide"
-  },
-  {
-    "doc_id": "doc-materials-approval-table",
-    "title": "Materials Approval Workflow Table",
-    "source_path": "fixtures/knowledge/sources/materials_approval_workflow.csv",
-    "source_type": "csv",
-    "audience": "internal",
     "product": "multi",
     "region": "global",
-    "approved_status": "approved_internal",
-    "effective_date": "2026-02-10",
-    "content_section": "internal_process",
-    "sensitivity": "internal",
-    "citation_label": "MLR Workflow Matrix"
+    "approved_status": "approved",
+    "effective_date": "2026-04-03",
+    "content_section": "patient_clinical_trial_eligibility",
+    "sensitivity": "public_patient",
+    "citation_label": "Public NSCLC Trial Eligibility Criteria"
   },
   {
     "doc_id": "doc-safety-contact-form",
@@ -82,5 +68,47 @@
     "content_section": "sample_ordering",
     "sensitivity": "public_hcp",
     "citation_label": "Cardiolase Sample Ordering Guide"
+  },
+  {
+    "doc_id": "doc-rag-data-access-policy-pdf",
+    "title": "Internal RAG Data Access Policy",
+    "source_path": "fixtures/knowledge/sources/internal_rag_data_access_policy.pdf",
+    "source_type": "pdf",
+    "audience": "internal",
+    "product": "multi",
+    "region": "global",
+    "approved_status": "approved_internal",
+    "effective_date": "2026-04-03",
+    "content_section": "internal_rag_policy",
+    "sensitivity": "internal",
+    "citation_label": "Internal RAG Data Access Policy"
+  },
+  {
+    "doc_id": "doc-rag-grounding-policy-pdf",
+    "title": "Internal RAG Grounding and Citation Policy",
+    "source_path": "fixtures/knowledge/sources/internal_rag_grounding_policy.pdf",
+    "source_type": "pdf",
+    "audience": "internal",
+    "product": "multi",
+    "region": "global",
+    "approved_status": "approved_internal",
+    "effective_date": "2026-04-03",
+    "content_section": "internal_rag_policy",
+    "sensitivity": "internal",
+    "citation_label": "Internal RAG Grounding and Citation Policy"
+  },
+  {
+    "doc_id": "doc-rag-logging-review-policy-pdf",
+    "title": "Internal RAG Logging and Human Review Policy",
+    "source_path": "fixtures/knowledge/sources/internal_rag_logging_review_policy.pdf",
+    "source_type": "pdf",
+    "audience": "internal",
+    "product": "multi",
+    "region": "global",
+    "approved_status": "approved_internal",
+    "effective_date": "2026-04-03",
+    "content_section": "internal_rag_policy",
+    "sensitivity": "internal",
+    "citation_label": "Internal RAG Logging and Human Review Policy"
   }
 ]

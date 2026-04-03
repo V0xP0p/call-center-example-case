@@ -1,0 +1,20 @@
+[
+  {
+    "contact_id": "colleague-owens",
+    "employee_id": "EMP-2205",
+    "name": "Priya Owens",
+    "department": "Medical Information",
+    "remaining_leave_days": 11,
+    "manager": "Sandra Patel",
+    "work_location": "New York Hub"
+  },
+  {
+    "contact_id": "colleague-chen",
+    "employee_id": "EMP-1813",
+    "name": "David Chen",
+    "department": "Patient Support Operations",
+    "remaining_leave_days": 7,
+    "manager": "Monica Ruiz",
+    "work_location": "Chicago Hub"
+  }
+]

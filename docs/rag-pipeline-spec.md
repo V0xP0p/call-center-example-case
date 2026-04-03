@@ -39,6 +39,7 @@ Supported source patterns in this repo:
 
 - markdown policy docs
 - HTML snippets
+- JSON criteria documents
 - TXT exports simulating PDF extraction noise
 - CSV tables
 - form-like text documents
@@ -122,8 +123,8 @@ Example chunking targets in this repo:
 
 - HCP side-effect guidance sections
 - adverse-event minimum information checklist
-- patient support eligibility table
-- colleague-only approval workflow steps
+- patient clinical-trial eligibility criteria
+- internal RAG data-access, grounding, and review policy sections
 
 ## Stage 6: Index Preparation
 
@@ -157,8 +158,8 @@ Required behaviors:
 Examples:
 
 - doctors may retrieve HCP-safe medical information and public reporting policy
-- patients may retrieve patient-safe support and safety guidance, but not internal SOPs
-- colleagues may retrieve internal policy documents
+- patients may retrieve patient-safe trial-screening guidance and safety guidance, but not internal SOPs
+- colleagues may retrieve internal policy documents and only their own verified personal-data record
 
 ## Stage 8: Selection / Reranking
 

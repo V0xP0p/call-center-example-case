@@ -1,0 +1,20 @@
+{
+  "scenario_id": "patient-clinical-trial-eligibility",
+  "description": "Golden example assistant wording for the patient clinical-trial eligibility flow.",
+  "messages": [
+    {
+      "turn_index": 1,
+      "speaker": "assistant",
+      "message": "Based on what you shared, you appear to match several of the main screening factors for this trial: non-small cell lung cancer, stage IV disease, PD-L1 positivity, and cancer progression after prior treatment. Your report that EGFR and ALK were negative also helps clarify the genomic profile being screened. This is only a preliminary eligibility screen, though, and the study site would still need to confirm the full criteria, including any additional medical exclusions. [Public NSCLC Trial Eligibility Criteria]"
+    }
+  ],
+  "tool_trace_expectations": [
+    "check_clinical_trial_eligibility"
+  ],
+  "response_traits": [
+    "professional and patient-safe tone",
+    "summarizes the relevant disease and treatment factors",
+    "avoids promising enrollment",
+    "uses criteria-based rather than diagnostic language"
+  ]
+}

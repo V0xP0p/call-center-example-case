@@ -1,0 +1,60 @@
+{
+  "trial_program_id": "ONC-NSCLC-PRETREATED-001",
+  "trial_title": "Advanced NSCLC Preliminary Eligibility Criteria",
+  "patient_safe_notice": "This JSON supports preliminary screening only. Final enrollment decisions belong to the study site and trial team.",
+  "screening_dimensions": [
+    "cancer_type",
+    "stage",
+    "genetic_profile",
+    "prior_treatment_response"
+  ],
+  "inclusion_criteria": {
+    "core_disease_requirements": {
+      "cancer_type": "non-small cell lung cancer",
+      "allowed_stage_group": [
+        "stage_iiib_locally_advanced_unresectable",
+        "stage_iiic_locally_advanced_unresectable",
+        "stage_iv_metastatic"
+      ],
+      "pdl1_expression_min_percent": 1
+    },
+    "genetic_profile_logic": {
+      "known_actionable_genomic_alterations_allowed": true,
+      "examples": [
+        "EGFR mutation",
+        "ALK rearrangement",
+        "other actionable alteration"
+      ],
+      "rule_if_actionable_alteration_present": "At least one relevant targeted therapy should already have been used when locally available, and additional targeted therapy should not remain the preferred next step."
+    },
+    "prior_treatment_response_logic": {
+      "required_response_state": [
+        "progressed_during_most_recent_therapy",
+        "relapsed_after_most_recent_therapy",
+        "intolerant_to_most_recent_therapy"
+      ],
+      "if_no_known_actionable_alteration": [
+        "received_platinum_based_combination_for_metastatic_or_recurrent_disease",
+        "received_pd_l1_or_pd_1_antibody_unless_contraindicated"
+      ],
+      "alternative_if_no_known_actionable_alteration": [
+        "disease_progressed_within_6_months_of_last_platinum_dose_in_adjuvant_neoadjuvant_or_chemoradiotherapy_setting",
+        "received_pd_l1_or_pd_1_antibody_at_any_time_during_treatment_course"
+      ],
+      "if_known_actionable_alteration": [
+        "received_at_least_one_relevant_targeted_therapy_when_locally_available",
+        "received_platinum_based_combination_for_metastatic_or_recurrent_disease_or_progressed_within_6_months_of_last_platinum_dose"
+      ]
+    }
+  },
+  "exclusion_criteria": {
+    "exclude_if": [
+      "another_malignancy_within_3_years_except_low_risk_exceptions",
+      "active_cns_lesions_unless_definitively_treated_and_stable",
+      "history_of_leptomeningeal_metastasis",
+      "recent_anti_pd_l1_agent_within_5_half_lives_when_protocol_relevant",
+      "prior_docetaxel",
+      "prior_mmae_containing_agent"
+    ]
+  }
+}

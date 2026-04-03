@@ -1,0 +1,65 @@
+{
+  "doc_id": "doc-public-oncology-trial-eligibility-json",
+  "source_metadata": {
+    "title": "Public Advanced NSCLC Trial Eligibility Criteria",
+    "source_type": "json",
+    "audience": "patient",
+    "product": "multi",
+    "approved_status": "approved",
+    "citation_label": "Public NSCLC Trial Eligibility Criteria"
+  },
+  "content_blocks": [
+    {
+      "block_type": "heading",
+      "section_path": ["Advanced NSCLC Preliminary Eligibility Criteria"],
+      "text": "Advanced NSCLC Preliminary Eligibility Criteria"
+    },
+    {
+      "block_type": "paragraph",
+      "section_path": ["patient_safe_notice"],
+      "text": "This JSON supports preliminary screening only. Final enrollment decisions belong to the study site and trial team."
+    },
+    {
+      "block_type": "list",
+      "section_path": ["inclusion_criteria", "core_disease_requirements"],
+      "items": [
+        "Cancer type: non-small cell lung cancer",
+        "Allowed stage group: stage IIIB or IIIC locally advanced unresectable disease, or stage IV metastatic disease",
+        "PD-L1 expression minimum: 1%"
+      ]
+    },
+    {
+      "block_type": "list",
+      "section_path": ["inclusion_criteria", "genetic_profile_logic"],
+      "items": [
+        "Known actionable genomic alterations are allowed",
+        "Examples include EGFR mutation, ALK rearrangement, and other actionable alterations",
+        "If an actionable alteration is present, at least one relevant targeted therapy should already have been used when locally available"
+      ]
+    },
+    {
+      "block_type": "list",
+      "section_path": ["inclusion_criteria", "prior_treatment_response_logic"],
+      "items": [
+        "Required response state: progressed during, relapsed after, or was intolerant to the most recent therapy",
+        "If no known actionable alteration: prior platinum-based combination therapy for metastatic or recurrent disease and PD-(L)1 therapy unless contraindicated",
+        "Alternative path: progression within 6 months of last platinum dose in adjuvant, neoadjuvant, or chemoradiotherapy setting plus PD-(L)1 therapy",
+        "If a known actionable alteration is present: at least one relevant targeted therapy and platinum-based therapy or early progression after platinum"
+      ]
+    },
+    {
+      "block_type": "list",
+      "section_path": ["exclusion_criteria"],
+      "items": [
+        "Another malignancy within 3 years except low-risk exceptions",
+        "Active CNS lesions unless definitively treated and stable",
+        "History of leptomeningeal metastasis",
+        "Recent anti-PD-L1 exposure when protocol-relevant",
+        "Prior docetaxel",
+        "Prior MMAE-containing agent"
+      ]
+    }
+  ],
+  "tables": [],
+  "warnings": []
+}

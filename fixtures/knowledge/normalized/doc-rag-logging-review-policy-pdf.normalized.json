@@ -1,0 +1,25 @@
+{
+  "doc_id": "doc-rag-logging-review-policy-pdf",
+  "normalized_text": "Internal RAG Logging and Human Review Policy\nLogging Minimums\n- RAG systems may log request metadata, selected document identifiers, and review outcomes needed for audit and quality checks.\n- Logs should minimize personal data and should not retain more content than is necessary for approved operational purposes.\n\nRetention and Privacy\n- Personal data included in prompts or retrieved passages must follow internal retention limits and access controls.\n- Teams should mask or minimize employee identifiers in routine debugging workflows whenever practical.\n\nHuman Review Triggers\n- Route answers for human review when the request concerns personnel status, leave disputes, disciplinary matters, legal interpretation, or unresolved policy conflict.\n- Escalate when the assistant cannot support the answer with policy evidence from approved internal documents.",
+  "content_blocks": [
+    {
+      "block_type": "section",
+      "section_path": ["Logging Minimums"],
+      "text": "- RAG systems may log request metadata, selected document identifiers, and review outcomes needed for audit and quality checks.\n- Logs should minimize personal data and should not retain more content than is necessary for approved operational purposes."
+    },
+    {
+      "block_type": "section",
+      "section_path": ["Retention and Privacy"],
+      "text": "- Personal data included in prompts or retrieved passages must follow internal retention limits and access controls.\n- Teams should mask or minimize employee identifiers in routine debugging workflows whenever practical."
+    },
+    {
+      "block_type": "section",
+      "section_path": ["Human Review Triggers"],
+      "text": "- Route answers for human review when the request concerns personnel status, leave disputes, disciplinary matters, legal interpretation, or unresolved policy conflict.\n- Escalate when the assistant cannot support the answer with policy evidence from approved internal documents."
+    }
+  ],
+  "normalization_notes": [
+    "Flattened PDF text into section-oriented retrieval blocks.",
+    "Preserved logging, retention, and human-review requirements."
+  ]
+}

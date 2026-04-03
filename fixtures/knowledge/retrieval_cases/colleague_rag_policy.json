@@ -1,0 +1,14 @@
+{
+  "scenario_id": "rag-colleague-rag-policy",
+  "query": "I am on the internal AI enablement team. What does company policy require for a RAG assistant that answers employee questions from internal policy PDFs?",
+  "persona": "colleague",
+  "allowed_retrieval_scope": {
+    "audiences": ["internal", "colleague", "public"],
+    "sensitivity": ["internal", "public_hcp", "public_patient"],
+    "products": ["multi"]
+  },
+  "expected_relevant_docs": ["doc-rag-data-access-policy-pdf", "doc-rag-grounding-policy-pdf", "doc-rag-logging-review-policy-pdf"],
+  "expected_excluded_docs": [],
+  "expected_response_traits": ["describes internal RAG policy requirements", "uses internal-only content appropriately", "includes citations"],
+  "expected_citation_behavior": "May cite internal materials because the persona is colleague."
+}

@@ -18,7 +18,7 @@ Provide reusable templates for agents that appear in the centralized contact-cen
 - input: route decision, retrieval package, optional tool results
 - output: response draft plus trace steps
 - tools: lookup tools only when route allows
-- responsibilities: answer support, information, or sample-order requests using approved content and allowed tool results
+- responsibilities: answer support, information, sample-order, colleague personal-data, or policy requests using approved content and allowed tool results
 
 ### Safety Intake Agent
 

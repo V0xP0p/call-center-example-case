@@ -8,7 +8,7 @@
     "products": ["Cardiolase"]
   },
   "expected_relevant_docs": [],
-  "expected_excluded_docs": ["doc-materials-approval-table", "doc-safety-sop-export"],
+  "expected_excluded_docs": ["doc-rag-data-access-policy-pdf", "doc-rag-grounding-policy-pdf", "doc-rag-logging-review-policy-pdf", "doc-safety-sop-export"],
   "expected_response_traits": ["acknowledges corpus limits", "avoids comparative medical advice", "stays honest about uncertainty"],
   "expected_citation_behavior": "Should avoid fabricated citations and may respond without retrieval if no evidence qualifies."
 }

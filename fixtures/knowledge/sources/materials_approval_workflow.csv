@@ -1,5 +1,0 @@
-material_type,external_use,required_approvals,notes
-Field aid,yes,medical|legal|regulatory,Required before external sharing
-Speaker deck,yes,medical|legal|regulatory,Required before congress or HCP delivery
-Training memo,no,medical manager only,Internal use only
-FAQ update,yes,medical|regulatory,Use approved source references

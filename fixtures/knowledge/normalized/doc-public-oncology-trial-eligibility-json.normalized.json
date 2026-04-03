@@ -1,0 +1,30 @@
+{
+  "doc_id": "doc-public-oncology-trial-eligibility-json",
+  "normalized_text": "Advanced NSCLC Preliminary Eligibility Criteria\nPatient-safe notice\nThis JSON supports preliminary screening only. Final enrollment decisions belong to the study site and trial team.\n\nCore disease requirements\n- Cancer type: non-small cell lung cancer\n- Allowed stage group: stage IIIB or IIIC locally advanced unresectable disease, or stage IV metastatic disease\n- PD-L1 expression minimum: 1%\n\nGenetic profile logic\n- Known actionable genomic alterations are allowed\n- Examples include EGFR mutation, ALK rearrangement, and other actionable alterations\n- If an actionable alteration is present, at least one relevant targeted therapy should already have been used when locally available\n\nPrior treatment response logic\n- Required response state: progressed during, relapsed after, or was intolerant to the most recent therapy\n- If no known actionable alteration: prior platinum-based combination therapy for metastatic or recurrent disease and PD-(L)1 therapy unless contraindicated\n- Alternative path: progression within 6 months of last platinum dose in adjuvant, neoadjuvant, or chemoradiotherapy setting plus PD-(L)1 therapy\n- If a known actionable alteration is present: at least one relevant targeted therapy and platinum-based therapy or early progression after platinum\n\nExclusion criteria\n- Another malignancy within 3 years except low-risk exceptions\n- Active CNS lesions unless definitively treated and stable\n- History of leptomeningeal metastasis\n- Recent anti-PD-L1 exposure when protocol-relevant\n- Prior docetaxel\n- Prior MMAE-containing agent",
+  "content_blocks": [
+    {
+      "block_type": "section",
+      "section_path": ["Core disease requirements"],
+      "text": "- Cancer type: non-small cell lung cancer\n- Allowed stage group: stage IIIB or IIIC locally advanced unresectable disease, or stage IV metastatic disease\n- PD-L1 expression minimum: 1%"
+    },
+    {
+      "block_type": "section",
+      "section_path": ["Genetic profile logic"],
+      "text": "- Known actionable genomic alterations are allowed\n- Examples include EGFR mutation, ALK rearrangement, and other actionable alterations\n- If an actionable alteration is present, at least one relevant targeted therapy should already have been used when locally available"
+    },
+    {
+      "block_type": "section",
+      "section_path": ["Prior treatment response logic"],
+      "text": "- Required response state: progressed during, relapsed after, or was intolerant to the most recent therapy\n- If no known actionable alteration: prior platinum-based combination therapy for metastatic or recurrent disease and PD-(L)1 therapy unless contraindicated\n- Alternative path: progression within 6 months of last platinum dose in adjuvant, neoadjuvant, or chemoradiotherapy setting plus PD-(L)1 therapy\n- If a known actionable alteration is present: at least one relevant targeted therapy and platinum-based therapy or early progression after platinum"
+    },
+    {
+      "block_type": "section",
+      "section_path": ["Exclusion criteria"],
+      "text": "- Another malignancy within 3 years except low-risk exceptions\n- Active CNS lesions unless definitively treated and stable\n- History of leptomeningeal metastasis\n- Recent anti-PD-L1 exposure when protocol-relevant\n- Prior docetaxel\n- Prior MMAE-containing agent"
+    }
+  ],
+  "normalization_notes": [
+    "Flattened JSON criteria into section-oriented retrieval text blocks.",
+    "Preserved patient-safe language and screening caveats."
+  ]
+}
