@@ -1,0 +1,21 @@
+{
+  "scenario_id": "colleague-internal-policy",
+  "description": "Internal colleague asks for materials approval workflow.",
+  "turns": [
+    {
+      "speaker": "user",
+      "message": "I am Priya from medical information. Which materials need MLR approval before external sharing?"
+    },
+    {
+      "speaker": "expected_system",
+      "message_traits": [
+        "recognizes colleague persona",
+        "retrieves internal workflow table",
+        "summarizes approval requirements accurately"
+      ]
+    }
+  ],
+  "expected_route": "colleague_internal_process",
+  "required_tools": ["lookup_contact_profile"],
+  "required_docs": ["doc-materials-approval-table"]
+}

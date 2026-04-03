@@ -1,0 +1,72 @@
+[
+  {
+    "doc_id": "doc-cardiolase-hcp-faq",
+    "title": "Cardiolase HCP Frequently Asked Questions",
+    "source_path": "fixtures/knowledge/sources/cardiolase_hcp_faq.md",
+    "source_type": "markdown",
+    "audience": "doctor",
+    "product": "Cardiolase",
+    "region": "global",
+    "approved_status": "approved",
+    "effective_date": "2026-01-15",
+    "content_section": "medical_information",
+    "sensitivity": "public_hcp",
+    "citation_label": "Cardiolase HCP FAQ (2026)"
+  },
+  {
+    "doc_id": "doc-safety-sop-export",
+    "title": "Adverse Event Intake SOP Export",
+    "source_path": "fixtures/knowledge/sources/adverse_event_sop_export.txt",
+    "source_type": "txt_pdf_export",
+    "audience": "internal",
+    "product": "multi",
+    "region": "global",
+    "approved_status": "approved_internal",
+    "effective_date": "2026-02-01",
+    "content_section": "safety_reporting",
+    "sensitivity": "internal",
+    "citation_label": "AE Intake SOP Rev 4"
+  },
+  {
+    "doc_id": "doc-patient-support-html",
+    "title": "Cardiolase Support Program Eligibility",
+    "source_path": "fixtures/knowledge/sources/cardiolase_support_program.html",
+    "source_type": "html",
+    "audience": "patient",
+    "product": "Cardiolase",
+    "region": "global",
+    "approved_status": "approved",
+    "effective_date": "2026-01-20",
+    "content_section": "patient_support",
+    "sensitivity": "public_patient",
+    "citation_label": "Cardiolase Access Path Guide"
+  },
+  {
+    "doc_id": "doc-materials-approval-table",
+    "title": "Materials Approval Workflow Table",
+    "source_path": "fixtures/knowledge/sources/materials_approval_workflow.csv",
+    "source_type": "csv",
+    "audience": "internal",
+    "product": "multi",
+    "region": "global",
+    "approved_status": "approved_internal",
+    "effective_date": "2026-02-10",
+    "content_section": "internal_process",
+    "sensitivity": "internal",
+    "citation_label": "MLR Workflow Matrix"
+  },
+  {
+    "doc_id": "doc-safety-contact-form",
+    "title": "Safety Contact Form Template",
+    "source_path": "fixtures/knowledge/sources/safety_contact_form.txt",
+    "source_type": "form_text",
+    "audience": "doctor",
+    "product": "multi",
+    "region": "global",
+    "approved_status": "approved",
+    "effective_date": "2026-01-05",
+    "content_section": "reporting_contact",
+    "sensitivity": "public_hcp",
+    "citation_label": "Safety Contact Template"
+  }
+]

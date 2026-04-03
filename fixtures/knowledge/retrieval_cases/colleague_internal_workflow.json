@@ -1,0 +1,14 @@
+{
+  "scenario_id": "rag-colleague-materials-workflow",
+  "query": "I am on the medical information team. Which materials require medical, legal, and regulatory approval before they can be shared externally?",
+  "persona": "colleague",
+  "allowed_retrieval_scope": {
+    "audiences": ["internal", "colleague", "public"],
+    "sensitivity": ["internal", "public_hcp", "public_patient"],
+    "products": ["multi"]
+  },
+  "expected_relevant_docs": ["doc-materials-approval-table"],
+  "expected_excluded_docs": [],
+  "expected_response_traits": ["describes internal approval workflow", "uses internal-only content appropriately"],
+  "expected_citation_behavior": "May cite internal materials because the persona is colleague."
+}

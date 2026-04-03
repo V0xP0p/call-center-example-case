@@ -1,0 +1,64 @@
+[
+  {
+    "scenario_id": "rag-parse-preserves-sections",
+    "description": "Parsing should preserve section boundaries and checklist content from the safety SOP export.",
+    "input": {
+      "doc_id": "doc-safety-sop-export"
+    },
+    "expected": {
+      "required_docs": ["doc-safety-sop-export"],
+      "response_traits": ["sections retained", "minimum information list retained", "seriousness indicators retained"]
+    },
+    "scoring_dimensions": ["parsing_quality", "structural_preservation"]
+  },
+  {
+    "scenario_id": "rag-normalization-fidelity",
+    "description": "Normalization must preserve medically relevant wording while cleaning export noise.",
+    "input": {
+      "doc_id": "doc-safety-sop-export"
+    },
+    "expected": {
+      "response_traits": ["keeps minimum information wording", "does not alter seriousness indicators"]
+    },
+    "scoring_dimensions": ["normalization_fidelity"]
+  },
+  {
+    "scenario_id": "rag-doctor-side-effects-reporting",
+    "description": "Doctor retrieval uses HCP-safe public sources only.",
+    "input": {
+      "retrieval_case": "fixtures/knowledge/retrieval_cases/doctor_side_effects_and_reporting.json"
+    },
+    "expected": {
+      "required_docs": ["doc-cardiolase-hcp-faq", "doc-safety-contact-form"],
+      "forbidden_docs": ["doc-materials-approval-table", "doc-safety-sop-export"],
+      "response_traits": ["cites approved sources", "avoids internal-only material"]
+    },
+    "scoring_dimensions": ["retrieval_relevance", "filtering_accuracy", "groundedness"]
+  },
+  {
+    "scenario_id": "rag-patient-symptom-support",
+    "description": "Patient retrieval stays within patient-safe support guidance.",
+    "input": {
+      "retrieval_case": "fixtures/knowledge/retrieval_cases/patient_symptom_and_support.json"
+    },
+    "expected": {
+      "required_docs": ["doc-patient-support-html"],
+      "forbidden_docs": ["doc-cardiolase-hcp-faq", "doc-materials-approval-table", "doc-safety-sop-export"],
+      "response_traits": ["patient_safe_only"]
+    },
+    "scoring_dimensions": ["retrieval_relevance", "scope_control", "groundedness"]
+  },
+  {
+    "scenario_id": "rag-out-of-corpus",
+    "description": "Out-of-corpus questions should not produce fabricated evidence.",
+    "input": {
+      "retrieval_case": "fixtures/knowledge/retrieval_cases/out_of_corpus_question.json"
+    },
+    "expected": {
+      "required_docs": [],
+      "forbidden_docs": ["doc-materials-approval-table", "doc-safety-sop-export"],
+      "response_traits": ["honest_limitations", "no_fake_citations"]
+    },
+    "scoring_dimensions": ["groundedness", "hallucination_resistance"]
+  }
+]

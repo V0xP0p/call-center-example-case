@@ -1,0 +1,39 @@
+{
+  "doc_id": "doc-patient-support-html",
+  "source_metadata": {
+    "title": "Cardiolase Support Program Eligibility",
+    "source_type": "html",
+    "audience": "patient",
+    "product": "Cardiolase",
+    "approved_status": "approved",
+    "citation_label": "Cardiolase Access Path Guide"
+  },
+  "content_blocks": [
+    {
+      "block_type": "heading",
+      "section_path": ["Cardiolase Access Path"],
+      "text": "Cardiolase Access Path"
+    },
+    {
+      "block_type": "paragraph",
+      "section_path": ["Who may qualify"],
+      "text": "Patients with commercial insurance, limited coverage, or no insurance may qualify depending on review criteria."
+    },
+    {
+      "block_type": "list",
+      "section_path": ["Required documents"],
+      "items": [
+        "Prescriber enrollment form",
+        "Signed patient consent",
+        "Proof of income when required"
+      ]
+    },
+    {
+      "block_type": "paragraph",
+      "section_path": ["Case status support"],
+      "text": "Once enrolled, patients may contact the support center for case updates using their patient identifier."
+    }
+  ],
+  "tables": [],
+  "warnings": []
+}

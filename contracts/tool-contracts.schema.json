@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/contracts/tool-contracts.schema.json",
+  "title": "Tool Contracts",
+  "type": "object",
+  "required": ["tool_request", "tool_result"],
+  "properties": {
+    "tool_request": {
+      "type": "object",
+      "required": ["tool_name", "arguments", "request_id"],
+      "properties": {
+        "request_id": { "type": "string" },
+        "tool_name": { "type": "string", "enum": ["lookup_contact_profile", "lookup_case_history", "create_support_case", "file_safety_report"] },
+        "arguments": { "type": "object" },
+        "requested_by": { "type": "string" },
+        "audit_reason": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "tool_result": {
+      "type": "object",
+      "required": ["request_id", "tool_name", "status", "payload"],
+      "properties": {
+        "request_id": { "type": "string" },
+        "tool_name": { "type": "string" },
+        "status": { "type": "string", "enum": ["success", "not_found", "validation_error", "blocked"] },
+        "payload": { "type": "object" },
+        "audit_metadata": {
+          "type": "object",
+          "properties": {
+            "timestamp": { "type": "string" },
+            "storage_key": { "type": "string" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "case_id": "CASE-1007",
+    "contact_id": "patient-santos",
+    "case_type": "patient_support",
+    "product": "Cardiolase",
+    "status": "documents_pending",
+    "last_updated": "2026-02-18"
+  },
+  {
+    "case_id": "CASE-2042",
+    "contact_id": "doctor-rivera",
+    "case_type": "medical_information",
+    "product": "Cardiolase",
+    "status": "closed",
+    "last_updated": "2026-01-10"
+  }
+]

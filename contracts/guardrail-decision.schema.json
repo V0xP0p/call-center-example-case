@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/contracts/guardrail-decision.schema.json",
+  "title": "GuardrailDecision",
+  "type": "object",
+  "required": ["decision", "reason_codes"],
+  "properties": {
+    "decision": { "type": "string", "enum": ["allow", "revise", "block", "escalate"] },
+    "reason_codes": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["unsafe_medical_advice", "missing_citation", "unsupported_claim", "internal_content_leak", "missing_safety_intake_fields", "pii_leak", "persona_mismatch", "policy_rewrite_required"] }
+    },
+    "rewrite_instructions": { "type": "string" },
+    "escalation_target": { "type": "string" }
+  },
+  "additionalProperties": false
+}

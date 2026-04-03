@@ -1,0 +1,68 @@
+{
+  "doc_id": "doc-safety-sop-export",
+  "source_metadata": {
+    "title": "Adverse Event Intake SOP Export",
+    "source_type": "txt_pdf_export",
+    "audience": "internal",
+    "product": "multi",
+    "approved_status": "approved_internal",
+    "citation_label": "AE Intake SOP Rev 4"
+  },
+  "content_blocks": [
+    {
+      "block_type": "heading",
+      "section_path": ["Section 1", "Purpose"],
+      "text": "Purpose"
+    },
+    {
+      "block_type": "paragraph",
+      "section_path": ["Section 1", "Purpose"],
+      "text": "This procedure describes the minimum information needed to create a reportable safety case."
+    },
+    {
+      "block_type": "heading",
+      "section_path": ["Section 2", "Minimum information"],
+      "text": "Minimum information"
+    },
+    {
+      "block_type": "list",
+      "section_path": ["Section 2", "Minimum information"],
+      "items": [
+        "identifiable reporter",
+        "identifiable patient",
+        "suspect product",
+        "adverse event description"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "section_path": ["Section 3", "Seriousness indicators"],
+      "text": "Seriousness indicators"
+    },
+    {
+      "block_type": "list",
+      "section_path": ["Section 3", "Seriousness indicators"],
+      "items": [
+        "hospitalization",
+        "life-threatening event",
+        "death",
+        "disability or incapacity",
+        "other medically significant event"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "section_path": ["Section 4", "Agent instructions"],
+      "text": "Agent instructions"
+    },
+    {
+      "block_type": "paragraph",
+      "section_path": ["Section 4", "Agent instructions"],
+      "text": "Agents must not provide diagnosis or treatment direction. Agents should collect minimum information and escalate according to safety policy."
+    }
+  ],
+  "tables": [],
+  "warnings": [
+    "Source appears to be a plain-text export of a formatted SOP; original typography is unavailable."
+  ]
+}

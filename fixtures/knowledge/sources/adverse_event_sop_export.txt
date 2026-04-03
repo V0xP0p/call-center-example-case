@@ -1,0 +1,21 @@
+ADVERSE EVENT INTAKE SOP - REVISION 4
+
+Section 1  Purpose
+This procedure describes the minimum information needed to create a reportable safety case.
+
+Section 2  Minimum information
+1) identifiable reporter
+2) identifiable patient
+3) suspect product
+4) adverse event description
+
+Section 3  Seriousness indicators
+hospitalization
+life-threatening event
+death
+disability or incapacity
+other medically significant event
+
+Section 4  Agent instructions
+Agents must not provide diagnosis or treatment direction.
+Agents should collect minimum information and escalate according to safety policy.

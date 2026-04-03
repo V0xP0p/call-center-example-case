@@ -1,0 +1,18 @@
+[
+  {
+    "program_id": "SP-CARD-01",
+    "product": "Cardiolase",
+    "name": "Cardiolase Access Path",
+    "eligibility_summary": "Commercially insured and uninsured patients may qualify with provider confirmation and income review.",
+    "required_documents": ["prescriber_form", "patient_consent", "proof_of_income_if_uninsured"],
+    "contact_channel": "patient-support@mock-pharma.example"
+  },
+  {
+    "program_id": "SP-NEUR-02",
+    "product": "Neuroquil",
+    "name": "Neuroquil Assist",
+    "eligibility_summary": "Patients may qualify through bridge, copay, or compassionate access tracks.",
+    "required_documents": ["prescriber_form", "benefits_check_authorization"],
+    "contact_channel": "neuro-support@mock-pharma.example"
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/contracts/retrieval-contracts.schema.json",
+  "title": "Retrieval Contracts",
+  "type": "object",
+  "required": ["retrieval_request", "retrieved_chunk", "grounded_response_package"],
+  "properties": {
+    "retrieval_request": {
+      "type": "object",
+      "required": ["query", "persona", "allowed_audiences", "sensitivity_constraints"],
+      "properties": {
+        "query": { "type": "string" },
+        "persona": { "type": "string", "enum": ["patient", "doctor", "colleague", "unknown"] },
+        "product_scope": { "type": "array", "items": { "type": "string" } },
+        "allowed_audiences": { "type": "array", "items": { "type": "string" } },
+        "sensitivity_constraints": { "type": "array", "items": { "type": "string" } },
+        "top_k": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": false
+    },
+    "retrieved_chunk": {
+      "type": "object",
+      "required": ["chunk_id", "doc_id", "text", "score", "metadata", "citation_label"],
+      "properties": {
+        "chunk_id": { "type": "string" },
+        "doc_id": { "type": "string" },
+        "text": { "type": "string" },
+        "score": { "type": "number" },
+        "metadata": {
+          "type": "object",
+          "required": ["audience", "product", "approved_status", "sensitivity", "source_type"],
+          "properties": {
+            "audience": { "type": "string" },
+            "product": { "type": "string" },
+            "approved_status": { "type": "string" },
+            "sensitivity": { "type": "string" },
+            "source_type": { "type": "string" },
+            "content_section": { "type": "string" }
+          },
+          "additionalProperties": true
+        },
+        "citation_label": { "type": "string" },
+        "source_span": {
+          "type": "object",
+          "properties": {
+            "start_char": { "type": "integer", "minimum": 0 },
+            "end_char": { "type": "integer", "minimum": 0 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "grounded_response_package": {
+      "type": "object",
+      "required": ["answer_outline", "evidence", "citation_mode"],
+      "properties": {
+        "answer_outline": { "type": "string" },
+        "evidence": { "type": "array", "items": { "$ref": "#/properties/retrieved_chunk" } },
+        "citation_mode": { "type": "string", "enum": ["inline", "footnote", "reference_list"] },
+        "grounding_notes": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,40 @@
+{
+  "scenario_id": "rag-doctor-side-effects-reporting",
+  "retrieval_request": {
+    "query": "I am Dr. Rivera. What approved information can you share about Cardiolase dizziness and vomiting, and how do I report a serious event?",
+    "persona": "doctor",
+    "product_scope": ["Cardiolase"],
+    "allowed_audiences": ["doctor", "public"],
+    "sensitivity_constraints": ["public_hcp", "public_patient"],
+    "top_k": 3
+  },
+  "selected_chunks": [
+    "chunk-hcp-reporting-guidance"
+  ],
+  "grounded_response_package": {
+    "answer_outline": "Acknowledge that dizziness and vomiting are listed in approved HCP materials as observed adverse reactions, explain that serious or unexpected events should be reported promptly through the safety intake channel, and avoid patient-specific treatment advice.",
+    "evidence": [
+      {
+        "chunk_id": "chunk-hcp-reporting-guidance",
+        "doc_id": "doc-cardiolase-hcp-faq",
+        "text": "If a healthcare professional becomes aware of a serious or unexpected adverse event, the event should be reported promptly through the company's safety intake channel. The initial report should include an identifiable reporter, an identifiable patient, a suspect product, and an event description.",
+        "score": 0.96,
+        "metadata": {
+          "audience": "doctor",
+          "product": "Cardiolase",
+          "approved_status": "approved",
+          "sensitivity": "public_hcp",
+          "source_type": "markdown",
+          "content_section": "medical_information"
+        },
+        "citation_label": "Cardiolase HCP FAQ (2026)",
+        "source_span": {
+          "start_char": 318,
+          "end_char": 612
+        }
+      }
+    ],
+    "citation_mode": "inline",
+    "grounding_notes": "Internal SOP evidence excluded because the persona is doctor and only public/HCP-safe content is allowed."
+  }
+}

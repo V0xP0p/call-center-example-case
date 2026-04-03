@@ -1,0 +1,62 @@
+[
+  {
+    "contact_id": "doctor-rivera",
+    "persona": "doctor",
+    "name": "Dr. Elena Rivera",
+    "organization": "North Harbor Cardiology",
+    "license_id": "HCP-445811",
+    "specialty": "Cardiology",
+    "products_in_scope": ["Cardiolase", "Neuroquil"],
+    "allowed_audiences": ["doctor", "public"],
+    "status": "verified"
+  },
+  {
+    "contact_id": "doctor-shah",
+    "persona": "doctor",
+    "name": "Dr. Milan Shah",
+    "organization": "Lakeside Clinic",
+    "license_id": "HCP-112309",
+    "specialty": "Family Medicine",
+    "products_in_scope": ["Cardiolase"],
+    "allowed_audiences": ["doctor", "public"],
+    "status": "verified"
+  },
+  {
+    "contact_id": "patient-santos",
+    "persona": "patient",
+    "name": "Maria Santos",
+    "patient_id": "PAT-90211",
+    "products_in_scope": ["Cardiolase"],
+    "support_case_ids": ["CASE-1007"],
+    "allowed_audiences": ["patient", "public"],
+    "status": "verified"
+  },
+  {
+    "contact_id": "patient-green",
+    "persona": "patient",
+    "name": "Jason Green",
+    "patient_id": "PAT-88714",
+    "products_in_scope": ["Neuroquil"],
+    "support_case_ids": [],
+    "allowed_audiences": ["patient", "public"],
+    "status": "verified"
+  },
+  {
+    "contact_id": "colleague-owens",
+    "persona": "colleague",
+    "name": "Priya Owens",
+    "department": "Medical Information",
+    "employee_id": "EMP-2205",
+    "allowed_audiences": ["colleague", "internal", "public"],
+    "status": "verified"
+  },
+  {
+    "contact_id": "colleague-chen",
+    "persona": "colleague",
+    "name": "David Chen",
+    "department": "Patient Support Operations",
+    "employee_id": "EMP-1813",
+    "allowed_audiences": ["colleague", "internal", "public"],
+    "status": "verified"
+  }
+]

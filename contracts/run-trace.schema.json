@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/contracts/run-trace.schema.json",
+  "title": "RunTrace",
+  "type": "object",
+  "required": ["trace_id", "scenario_id", "turns", "final_message"],
+  "properties": {
+    "trace_id": { "type": "string" },
+    "scenario_id": { "type": "string" },
+    "turns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["step", "actor", "action_type", "summary"],
+        "properties": {
+          "step": { "type": "integer", "minimum": 1 },
+          "actor": { "type": "string" },
+          "action_type": { "type": "string", "enum": ["message", "route", "tool_call", "retrieval", "guardrail", "escalation"] },
+          "summary": { "type": "string" },
+          "artifacts": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false
+      }
+    },
+    "final_message": {
+      "type": "object",
+      "required": ["content", "citations"],
+      "properties": {
+        "content": { "type": "string" },
+        "citations": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

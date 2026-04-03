@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/contracts/route-decision.schema.json",
+  "title": "RouteDecision",
+  "type": "object",
+  "required": ["route_id", "persona", "intent", "confidence", "requires_escalation", "required_next_step"],
+  "properties": {
+    "route_id": { "type": "string" },
+    "persona": { "type": "string", "enum": ["patient", "doctor", "colleague", "unknown"] },
+    "intent": {
+      "type": "string",
+      "enum": ["medical_information", "adverse_event", "access_support", "internal_process", "mixed", "unknown"]
+    },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "risk_flags": { "type": "array", "items": { "type": "string" }, "default": [] },
+    "requires_escalation": { "type": "boolean" },
+    "required_next_step": {
+      "type": "string",
+      "enum": ["clarify_identity", "handoff_to_support_agent", "handoff_to_safety_agent", "handoff_to_colleague_agent", "invoke_tool", "retrieve_knowledge", "human_escalation"]
+    },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

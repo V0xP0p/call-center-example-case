@@ -1,0 +1,26 @@
+[
+  {
+    "tool_name": "lookup_contact_profile",
+    "description": "Fetches a local contact profile by claimed identity markers.",
+    "backing_store": "fixtures/contacts/contact_profiles.json",
+    "example_keys": ["name", "license_id", "patient_id", "employee_id"]
+  },
+  {
+    "tool_name": "lookup_case_history",
+    "description": "Fetches support or information case history for a verified contact.",
+    "backing_store": "fixtures/tools/case_history.json",
+    "example_keys": ["contact_id", "case_id"]
+  },
+  {
+    "tool_name": "create_support_case",
+    "description": "Creates a new local support case artifact.",
+    "backing_store": "fixtures/tools/case_history.json",
+    "example_keys": ["contact_id", "product", "issue_type"]
+  },
+  {
+    "tool_name": "file_safety_report",
+    "description": "Writes a local structured adverse-event record for demo purposes.",
+    "backing_store": "fixtures/tools/safety_report_template.json",
+    "example_keys": ["reporter", "patient", "product", "event_summary"]
+  }
+]

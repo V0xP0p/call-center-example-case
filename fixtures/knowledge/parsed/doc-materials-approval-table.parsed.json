@@ -1,0 +1,31 @@
+{
+  "doc_id": "doc-materials-approval-table",
+  "source_metadata": {
+    "title": "Materials Approval Workflow Table",
+    "source_type": "csv",
+    "audience": "internal",
+    "product": "multi",
+    "approved_status": "approved_internal",
+    "citation_label": "MLR Workflow Matrix"
+  },
+  "content_blocks": [
+    {
+      "block_type": "heading",
+      "section_path": ["Materials Approval Workflow"],
+      "text": "Materials Approval Workflow"
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "materials-approval-1",
+      "headers": ["material_type", "external_use", "required_approvals", "notes"],
+      "rows": [
+        ["Field aid", "yes", "medical|legal|regulatory", "Required before external sharing"],
+        ["Speaker deck", "yes", "medical|legal|regulatory", "Required before congress or HCP delivery"],
+        ["Training memo", "no", "medical manager only", "Internal use only"],
+        ["FAQ update", "yes", "medical|regulatory", "Use approved source references"]
+      ]
+    }
+  ],
+  "warnings": []
+}

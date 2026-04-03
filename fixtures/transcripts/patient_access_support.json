@@ -1,0 +1,22 @@
+{
+  "scenario_id": "patient-access-support",
+  "description": "Patient requests support program guidance and case lookup.",
+  "turns": [
+    {
+      "speaker": "user",
+      "message": "My name is Maria Santos. I want to know if I qualify for Cardiolase support and if you can check my case."
+    },
+    {
+      "speaker": "expected_system",
+      "message_traits": [
+        "uses patient-support language",
+        "explains required documents",
+        "can use case lookup if identity is enough",
+        "does not expose internal-only details"
+      ]
+    }
+  ],
+  "expected_route": "patient_access_support",
+  "required_tools": ["lookup_contact_profile", "lookup_case_history"],
+  "required_docs": ["doc-patient-support-html"]
+}

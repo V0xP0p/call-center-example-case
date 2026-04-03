@@ -1,0 +1,30 @@
+{
+  "doc_id": "doc-safety-sop-export",
+  "normalized_text": "Purpose\nThis procedure describes the minimum information needed to create a reportable safety case.\n\nMinimum information\n- identifiable reporter\n- identifiable patient\n- suspect product\n- adverse event description\n\nSeriousness indicators\n- hospitalization\n- life-threatening event\n- death\n- disability or incapacity\n- other medically significant event\n\nAgent instructions\nAgents must not provide diagnosis or treatment direction. Agents should collect minimum information and escalate according to safety policy.",
+  "content_blocks": [
+    {
+      "block_type": "section",
+      "section_path": ["Purpose"],
+      "text": "This procedure describes the minimum information needed to create a reportable safety case."
+    },
+    {
+      "block_type": "section",
+      "section_path": ["Minimum information"],
+      "text": "- identifiable reporter\n- identifiable patient\n- suspect product\n- adverse event description"
+    },
+    {
+      "block_type": "section",
+      "section_path": ["Seriousness indicators"],
+      "text": "- hospitalization\n- life-threatening event\n- death\n- disability or incapacity\n- other medically significant event"
+    },
+    {
+      "block_type": "section",
+      "section_path": ["Agent instructions"],
+      "text": "Agents must not provide diagnosis or treatment direction. Agents should collect minimum information and escalate according to safety policy."
+    }
+  ],
+  "normalization_notes": [
+    "Collapsed double spaces from section headers.",
+    "Converted numbered checklist to normalized bullet list while preserving wording."
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "report_id": "SAFETY-TEMPLATE",
+  "required_fields": ["reporter_name", "reporter_type", "suspect_product", "event_summary", "patient_identifier_or_initials"],
+  "optional_fields": ["seriousness_indicators", "onset_date", "outcome", "reporter_contact"],
+  "status_values": ["draft", "submitted", "escalated"]
+}

@@ -1,0 +1,9 @@
+Safety Reporting Contact Template
+Reporter Type: Healthcare Professional
+Contact Channel: safety@mock-pharma.example
+Business Hours: 24/7 intake accepted through secure queue
+Required Fields:
+- reporter name
+- patient identifier or initials
+- suspect product
+- event summary
